@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="285px" height="242px" viewBox="0 0 285 242">
+<filter filterUnits="objectBoundingBox" x="0.00" y="0.00" width="100.00" height="100.00" id="filter0">
+<feImage x="0" y="0" width="285" height="242" preserveApectRatio="none" xlink:href="#symbol0"/>
+<feComposite in="ptImage1" in2="SourceAlpha" operator="in" result="ptOverlay1"/>
+<feBlend in="ptOverlay1" in2="SourceGraphic" mode="normal" result="patternOverlay1"/>
+</filter>
+<pattern id="PSPattern_0" patternTransform="scale(1)" x="-361.13" y="-1417.95" width="8" height="8" patternUnits="userSpaceOnUse"><image x="0" y="0" width="8" height="8" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAAAAADhZOFXAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAA5SURBVAjXY7jzHwTuWzBAaKsbYMYD65v/QYyHtrf+gxiP7EHqGP4/crgLkmZ47HQPrJ7B5T6YfgAA0OI3q1SQztUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTctMDYtMDZUMDY6MzA6NDgrMDA6MDBfT/o5AAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE3LTA2LTA2VDA2OjMwOjQ4KzAwOjAwLhJChQAAAABJRU5ErkJggg==" /></pattern>
+<defs>
+<rect x="0" y="0" width="285" height="242" id="symbol0" fill="url(#PSPattern_0)"/></defs>
+<rect x="0" y="0" width="285" height="242" fill="rgb(81,143,203)" opacity="0.12" filter="url(#filter0)"/></svg>
