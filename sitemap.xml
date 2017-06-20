@@ -13,6 +13,9 @@
 <loc>http://0.0.0.0:4000/review</loc>
 </url>
 <url>
-<loc>http://0.0.0.0:4000/vacancies</loc>
+<loc>http://0.0.0.0:4000/vacancies/vacancy_c</loc>
+</url>
+<url>
+<loc>http://0.0.0.0:4000/vacancies/</loc>
 </url>
 </urlset>
