@@ -8,13 +8,12 @@ $(function(){
     var toggleMenuInput =  $("#menuToggle input[type='checkbox']");
     var horizontalBox = $(".horizontal-box").find(".card");
 
-    var mobileMenuValue = 1100;
+    var mobileMenuValue = 1024;
 
     var LINES_NUM = 4;
     var MOB_LINES_NUM = 2;
 
     var fixIphoneBugValue = 15;
-
 
 
     function generateSlides(){
@@ -32,6 +31,15 @@ $(function(){
                 },
                 complete: function(number) {
                     $('.slider-number-vertical').text(number);
+                }
+            },
+            effect: {
+                slide: {
+                    speed: 1000
+                },
+                fade: {
+                    speed: 1000,
+                    crossfade: true
                 }
             }
         });
@@ -52,6 +60,15 @@ $(function(){
                 complete: function(number) {
                     $('#slides-horizontal .slidesjs-navigation').show();
                     $('.slider-number-horizontal').text(number);
+                }
+            },
+            effect: {
+                slide: {
+                    speed: 1000
+                },
+                fade: {
+                    speed: 1000,
+                    crossfade: true
                 }
             }
         });
@@ -74,6 +91,15 @@ $(function(){
                     $('.slider-number-horizontal-1').text(number * IMG_NUM);
                     $('.top-navigation').css("lest", "0");
                 }
+            },
+            effect: {
+                slide: {
+                    speed: 1000
+                },
+                fade: {
+                    speed: 1000,
+                    crossfade: false
+                }
             }
         });
 
@@ -86,12 +112,9 @@ $(function(){
     function lines(){
         var linesConteiner = $('.lines');
         var line = linesConteiner.find("div");
-        var conteiner = $('.mobile');
 
-        var linesWidth = conteiner.width();
-        var linesHeight = conteiner.height() + 190;
-        if(isMobile) linesHeight -= 90;
-        linesHeight = fixLineHeight(linesHeight);
+        var linesWidth = $('#skrollr-body .mobile').width();
+        var linesHeight = $('#skrollr-body').height();
 
         linesConteiner.width(linesWidth);
         linesConteiner.height(linesHeight);
@@ -103,13 +126,6 @@ $(function(){
         line.height(linesHeight);
     }
 
-    function fixLineHeight(height){
-        var newHeight = height;
-        if($('.mobile').has('.contacts').length) newHeight += 250;
-        if($('.mobile').has('.contacts').length && isMobile) newHeight -= 250;
-        return newHeight;
-    }
-
     function hideNav() {
         $("[data-nav-status='toggle']").removeClass("is-visible").addClass("is-hidden");
     }
@@ -117,24 +133,26 @@ $(function(){
         $("[data-nav-status='toggle']").removeClass("is-hidden").addClass("is-visible");
     }
 
+    function hideOpenNavOnScroll(){
+        if(isMobile) {
+            toggleMenuInput.prop('checked', false);
+            menu.hide();
+        }
+    }
+
     function toggleMenuWhenResize(){
         //$('.play-img').height($('.video-block img').height()); for video
-        if ($(window).width() <= (mobileMenuValue + 36)){
-            horizontalBox.removeClass("horizontal");
-        }else {
-            horizontalBox.addClass("horizontal");
-        }
 
         if($(window).width() <= mobileMenuValue){
-
+            horizontalBox.removeClass("horizontal");
             isMobile = true;
             menu.hide();
         }
         else {
+            horizontalBox.addClass("horizontal");
             isMobile = false;
             menu.show();
         }
-
         menuOpacity();
         lines();
     }
@@ -155,10 +173,7 @@ $(function(){
         var currentScroll = $(this).scrollTop();
         if (currentScroll >= previousScroll && currentScroll > fixIphoneBugValue){
             hideNav();
-            if(isMobile) {
-                toggleMenuInput.prop('checked', false);
-                menu.hide();
-            }
+            hideOpenNavOnScroll();
         } else {
             showNav();
         }
@@ -189,6 +204,8 @@ $(function(){
         }
     });
 
+
+    $('.show-modal').click(hideOpenNavOnScroll);
 
     $(window).resize(toggleMenuWhenResize);
     $(window).scroll(menuBehaviorOnScroll);
