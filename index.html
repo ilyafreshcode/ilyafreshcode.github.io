@@ -2,10 +2,7 @@
 <html lang="en">
     <head>
     <meta name="description" content="">
-    <meta name="MobileOptimized" content="width" />
-    <meta name="HandheldFriendly" content="true" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
     <title>Главная - Freshcode</title>
 
@@ -41,7 +38,7 @@
                 <li><a href="/about" class=" link" >О нас</a></li>
                 
                 
-                <li><a href="/vacancies" class=" link" >Вакансии</a></li>
+                <li><a href="/vacancy" class=" link" >Вакансии</a></li>
                 
                 
                 <li><a href="/review" class=" link" >Отзывы сотрудников</a></li>
@@ -56,23 +53,20 @@
 
     <div id="CVForm" class="modal mobile">
     <a href="#!" class="modal-action modal-close btn-flat float-right button-square">
-        <img src="/images/close-icon.png">
+        <img src="/images/close-icon.png" height="18" width="18">
     </a>
     <div class="m-content">
         <div class="iframe-border">
             <iframe class="frame" scrolling="yes" src="https://script.google.com/macros/s/AKfycbwjWXZOaJwxeymSvmUHsj1PkD-e774X7n8Fi7FG750t1jSdFZM/exec" frameborder="0"></iframe>
         </div>
-
-
     </div>
-
 </div>
 
 </div>
 
         </header>
         <div id="skrollr-body">
-           <div class="container mobile">
+            <div class="container mobile">
     <div class="lines">
     <div></div>
     <div></div>
@@ -85,19 +79,21 @@
 <div class="main-img-mobile">
     <img src=/images/img-caption-mobile.png class="float-right"/>
 </div>
-<div class="vertical-middle main-title" data-0="top: 0px" data-1000="top: -100px">
+<div class="vertical-middle main-title">
     <section class="content-parallax-1 vertical-middle text-center">
-        <h3>Freshcode</h3>
-        <span>Разыскиваем IT таланты</span>
+        <div class="title-animation transition-animation">
+            <h3>Freshcode</h3>
+            <span>Разыскиваем IT таланты</span>
+        </div>
         <span><a href="#CVForm" class="button" style="margin-top: 35px;">Найди работу мечты</a></span>
     </section>
 </div>
-    <div class="quotes-2 float-right">
-    <img src=/images/slices/icon_quotes_1.svg  />
-</div>
+    <div class="content-parallax-2">
+    <div class="quotes-2 float-right begin-position-qopen transition-animation">
+        <img src=/images/slices/icon_quotes_1.svg  />
+    </div>
 
-<div class="content-parallax-2">
-    <section class="description">
+    <section class="description begin-position-text transition-animation">
         <h3>Коллектив Freshcode <br> - это команда специалистов</h3>
         <span>У нас работают яркие, неординарные личности.<br> Вместе мы создаем крутые решения для мировых брендов. Присоединяйся!</span>
     </section>
@@ -106,14 +102,14 @@
     <a href="#CVForm" class="button send-cv-position">Отправить резюме</a>
 
 
-    <div class="quotes">
+    <div class="quotes begin-position-qclose transition-animation">
         <img src=/images/slices/icon_quotes_2.svg />
     </div>
 
-    <div class="team-img">Команда</div>
+    <div class="team-img begin-position-team transition-animation-slow">Команда</div>
 
 
-    <section id="slides-vertical" class="vertical-box float-right">
+    <section id="slides-vertical" class="vertical-box float-right begin-position-box transition-animation">
         
         <div class="card">
             <div class="card-image">
@@ -169,7 +165,7 @@
     </section>
 
 
-    <section id="slides-horizontal" class="horizontal-box" data-0="margin-top: 0px" data-1000="margin-top: -50px">
+    <section id="slides-horizontal" class="horizontal-box begin-position-box transition-animation">
         
         <div class="card horizontal">
             <div class="card-image">
@@ -248,7 +244,7 @@
 
 
     <div class="content-parallax-3">
-    <section class="description">
+    <section class="description begin-position-text-next transition-animation-slow">
         <h3>Почему Freshcode?</h3>
         <span>Мы предлагаем интересные проекты, непрерывное развитие, комфортный офис. И все это - за достойную зарплату!</span>
     </section>
@@ -354,21 +350,21 @@
     <div class="content-parallax-4">
     <div style="position: relative; z-index: 200;">
         <section class="vac-description">
-            <img src="/images/slices/icon_eye.svg">
-            <h3>Вакансии IT компании Freshcode</h3>
-            <span>Крутых программистов много не бывает! Мы всегда ищем специалистов и мастеров своего дела. Ты - один из них? Давай к нам!</span>
+            <img src="/images/slices/icon_eye.svg" class="begin-position-img transition-animation">
+            <h3 class="begin-position-vac-text transition-animation">Вакансии IT компании Freshcode</h3>
+            <span class="begin-position-vac-text transition-animation">Крутых программистов много не бывает! Мы всегда ищем специалистов и мастеров своего дела. Ты - один из них? Давай к нам!</span>
         </section>
         <br>
         <a href="" class="button all-vacancy-position">Смотреть все вакансии</a>
     </div>
     <div class="vacancy-img"></div>
-    <div class="vacancy-img-text"><img src="/images/vac.png" /></div>
-    <div class="lines-bg"><div class="line-bg-tr"></div></div>
+    <div class="vacancy-img-text"><img src="/images/vac.png" class="begin-position-vacSubtitble transition-animation"/></div>
+    <div class="lines-bg begin-position-triangle transition-animation"><div class="line-bg-tr"></div></div>
 </div>
 </div>
 
 
-           <footer>
+            <footer>
     <div class="container">
         <div class="footer-main">
             <div class="vertical-middle footer-col"><span class="copyright">© 2017 Freshcode. All rights reserved.</span></div>
