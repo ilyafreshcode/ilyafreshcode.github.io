@@ -119,7 +119,6 @@ $(function(){
         var linesWidth = $('#skrollr-body .mobile').width();
         var linesHeight = $('#skrollr-body').height();
 
-        console.log(linesHeight);
         linesConteiner.width(linesWidth);
         linesConteiner.height(linesHeight);
 
@@ -223,7 +222,7 @@ $(function(){
     toggleMenuWhenResize();
     generateSlides();
     lines();
-    setTimeout(animation, 300);
+    setTimeout(animation, 200);
 });
 
 
