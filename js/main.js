@@ -223,7 +223,7 @@ $(function(){
     toggleMenuWhenResize();
     generateSlides();
     lines();
-    setTimeout(animation, 1500);
+    setTimeout(animation, 700);
 });
 
 
