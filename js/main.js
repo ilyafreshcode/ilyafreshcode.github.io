@@ -222,7 +222,7 @@ $(function(){
     toggleMenuWhenResize();
     generateSlides();
     lines();
-    setTimeout(animation, 200);
+    animation();
 });
 
 
@@ -304,6 +304,32 @@ var Animation = function(){
             } },
             {selector: '.contacts', offset: 1200, callback: function(){
                 $(".contacts .subtext").addClass("subtext-animation");
+            } },
+
+
+            {selector: '.vacancy', offset: 50, callback: function(){
+                $(".base-section .title").addClass("title-animation");
+            } },
+            {selector: '.vacancy', offset: 50, callback: function(){
+                $(".text-block .line").addClass("line-animation");
+            } },
+            {selector: '.vacancy', offset: 50, callback: function(){
+                $(".vacancy .subtitle").addClass("baseintro-animation");
+                $(".vacancy .intro").addClass("baseintro-animation");
+            } },
+            {selector: '.vacancy', offset: 250, callback: function(){
+                $(".first-section .subtext").addClass("subtext-animation");
+            } },
+            {selector: '.vacancies-section', offset: 350, callback: function(){
+                $(".vacancies-section .cards").addClass("cards-animation");
+            } },
+            {selector: '.candidat-section', offset: 550, callback: function(){
+                $(".candidat-section .text").addClass("text-animation");
+            } },
+            {selector: '.to-us-section', offset: 250, callback: function(){
+                $(".to-us-section .title").addClass("title-animation");
+                $(".to-us-section .subtitle").addClass("title-animation");
+                $(".to-us-section .subtext").addClass("title-animation");
             } }
         ];
         Materialize.scrollFire(options);
