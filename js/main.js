@@ -244,30 +244,26 @@ var Animation = function(){
                 $(".content-parallax-2 .team-img").addClass("team-animation");
             } },
             {selector: '.content-parallax-2', offset: 350, callback: function(){
-                $(".content-parallax-2 .vertical-box").addClass("box-animation")
+                $(".content-parallax-2 .vertical-box").addClass("box-animation");
             } },
             {selector: '.content-parallax-2', offset: 450, callback: function(){
-                $(".content-parallax-2 .horizontal-box").addClass("box-animation")
+                $(".content-parallax-2 .horizontal-box").addClass("box-animation");
             } },
             {selector: '.content-parallax-2', offset: 250, callback: function(){
-                $(".content-parallax-2 .quotes").addClass("qclose-animation")
+                $(".content-parallax-2 .quotes").addClass("qclose-animation");
             } },
             {selector: '.content-parallax-2', offset: 550, callback: function(){
-                $(".content-parallax-2 .quotes-2").addClass("qopen-animation")
+                $(".content-parallax-2 .quotes-2").addClass("qopen-animation");
             } },
             {selector: '.content-parallax-3', offset: -150, callback: function(){
                 $(".content-parallax-3 .description").addClass("textnext-animation");
             } },
             {selector: '.content-parallax-4', offset: 100, callback: function(){
                 $(".content-parallax-4 .begin-position-img").addClass("eye-animation");
-            } },
-            {selector: '.content-parallax-4', offset: 150, callback: function(){
                 $(".content-parallax-4 .begin-position-vac-text").addClass("vac-text-animation");
             } },
             {selector: '.content-parallax-4', offset: 350, callback: function(){
                 $(".content-parallax-4 .begin-position-triangle").addClass("triangle-animation");
-            } },
-            {selector: '.content-parallax-4', offset: 400, callback: function(){
                 $(".content-parallax-4 .begin-position-vacSubtitble").addClass("vacSubtitble-animation");
             } },
 
@@ -278,28 +274,20 @@ var Animation = function(){
             } },
             {selector: '.cards-review', offset: 50, callback: function(){
                 $(".cards-review .krasnogor").removeClass("begin-position-cards").addClass("cards-animation");
-            } },
-            {selector: '.cards-review', offset: 50, callback: function(){
                 $(".cards-review .troian").removeClass("begin-position-cards").addClass("cards-animation");
+                $(".cards-review .rv-quotes").removeClass("begin-position-rvqclose").addClass("rv-qclose-animation");
             } },
             {selector: '.cards-review', offset: 900, callback: function(){
                 $(".cards-review .logvinova").removeClass("begin-position-cards").addClass("cards-animation");
             } },
             {selector: '.cards-review', offset: 1100, callback: function(){
                 $(".cards-review .gonchar").removeClass("begin-position-cards").addClass("cards-animation");
-            } },
-            {selector: '.cards-review', offset: 50, callback: function(){
-                $(".cards-review .rv-quotes").removeClass("begin-position-rvqclose").addClass("rv-qclose-animation");
-            } },
-            {selector: '.cards-review', offset: 1100, callback: function(){
                 $(".cards-review .rv-quotes-2").removeClass("begin-position-rvqopen").addClass("rv-qopen-animation");
             } },
 
 
             {selector: '.contacts', offset: 50, callback: function(){
                 $(".contacts .title-section").addClass("title-animation");
-            } },
-            {selector: '.contacts', offset: 50, callback: function(){
                 $(".contacts .img-fly-position").addClass("img-plain-animation");
             } },
             {selector: '.contacts', offset: 1200, callback: function(){
@@ -309,11 +297,7 @@ var Animation = function(){
 
             {selector: '.vacancy', offset: 50, callback: function(){
                 $(".base-section .title").addClass("title-animation");
-            } },
-            {selector: '.vacancy', offset: 50, callback: function(){
                 $(".text-block .line").addClass("line-animation");
-            } },
-            {selector: '.vacancy', offset: 50, callback: function(){
                 $(".vacancy .subtitle").addClass("baseintro-animation");
                 $(".vacancy .intro").addClass("baseintro-animation");
             } },
@@ -330,6 +314,32 @@ var Animation = function(){
                 $(".to-us-section .title").addClass("title-animation");
                 $(".to-us-section .subtitle").addClass("title-animation");
                 $(".to-us-section .subtext").addClass("title-animation");
+            } },
+
+
+            {selector: '.about', offset: 50, callback: function(){
+                $(".about .about-title").addClass("about-title-animation");
+                $(".about .about-bg-img").addClass("about-bg-img-animation");
+            } },
+            {selector: '.about', offset: 900, callback: function(){
+                $(".about .left-text").addClass("left-text-animation");
+                $(".about .about-arrow").addClass("about-arrow-animation");
+            } },
+            {selector: '.about-f-section', offset: 1000, callback: function(){
+                $(".about .next").addClass("next-animation");
+                $(".about .block .text-block").addClass("text-block-animation");
+            } },
+            {selector: '.about-why-section', offset: 150, callback: function(){
+                $(".about .about-why-section").addClass("about-why-section-animation");
+            } },
+            {selector: '.target-section', offset: 150, callback: function(){
+                $(".about .target-img").addClass("target-img-animation");
+                $(".about .target-block").addClass("target-block-animation");
+                $(".about .target-section .subtext").addClass("subtext-animation");
+            } },
+            {selector: '.white-block', offset: 150, callback: function(){
+                $(".about .white-block .text").addClass("white-block-text-animation");
+                $(".about .about-triangle").addClass("about-triangle-animation");
             } }
         ];
         Materialize.scrollFire(options);
