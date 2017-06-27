@@ -190,7 +190,12 @@ $(function(){
         animation.init();
     }
 
-
+    function init(){
+        toggleMenuWhenResize();
+        generateSlides();
+        lines();
+        animation();
+    }
 
     $('.modal').modal(
         {
@@ -219,11 +224,12 @@ $(function(){
     $(window).resize(toggleMenuWhenResize);
     $(window).scroll(menuBehaviorOnScroll);
 
-    toggleMenuWhenResize();
-    generateSlides();
-    lines();
-    animation();
+    init();
 });
+
+
+
+
 
 
 var Animation = function(){
@@ -234,37 +240,40 @@ var Animation = function(){
 
     var mainPage = function(){
         var options = [
-            {selector: '.content-parallax-1', offset: 50, callback: function(){
-                $(".content-parallax-1 .caption-text").addClass("title-animation");
+            {selector: '.main-caption-content', offset: 50, callback: function(){
+                $(".main-caption-content .caption-text").addClass("title-animation");
             } },
-            {selector: '.content-parallax-2', offset: 50, callback: function(){
-                $(".content-parallax-2 .description").addClass("text-animation");
+            {selector: '.main-team-content', offset: 50, callback: function(){
+                $(".main-team-content .description").addClass("text-animation");
             } },
-            {selector: '.content-parallax-2', offset: 150, callback: function(){
-                $(".content-parallax-2 .team-img").addClass("team-animation");
+            {selector: '.main-team-content', offset: 150, callback: function(){
+                $(".main-team-content .team-img").addClass("team-animation");
             } },
-            {selector: '.content-parallax-2', offset: 350, callback: function(){
-                $(".content-parallax-2 .vertical-box").addClass("box-animation");
+            {selector: '.main-team-content', offset: 350, callback: function(){
+                $(".main-team-content .vertical-box").addClass("box-animation");
             } },
-            {selector: '.content-parallax-2', offset: 450, callback: function(){
-                $(".content-parallax-2 .horizontal-box").addClass("box-animation");
+            {selector: '.main-team-content', offset: 450, callback: function(){
+                $(".main-team-content .horizontal-box").addClass("box-animation");
             } },
-            {selector: '.content-parallax-2', offset: 250, callback: function(){
-                $(".content-parallax-2 .quotes").addClass("qclose-animation");
+            {selector: '.main-team-content', offset: 250, callback: function(){
+                $(".main-team-content .quotes").addClass("qclose-animation");
             } },
-            {selector: '.content-parallax-2', offset: 550, callback: function(){
-                $(".content-parallax-2 .quotes-2").addClass("qopen-animation");
+            {selector: '.main-team-content', offset: 550, callback: function(){
+                $(".main-team-content .quotes-2").addClass("qopen-animation");
             } },
-            {selector: '.content-parallax-3', offset: -150, callback: function(){
-                $(".content-parallax-3 .description").addClass("textnext-animation");
+            {selector: '.main-vacancy-content', offset: -150, callback: function(){
+                $(".main-vacancy-content .description").addClass("textnext-animation");
             } },
-            {selector: '.content-parallax-4', offset: 100, callback: function(){
-                $(".content-parallax-4 .begin-position-img").addClass("eye-animation");
-                $(".content-parallax-4 .begin-position-vac-text").addClass("vac-text-animation");
+            {selector: '.main-whysection-content', offset: 100, callback: function(){
+                $(".main-whysection-content .begin-position-img").addClass("eye-animation");
+                $(".main-whysection-content .begin-position-vac-text").addClass("vac-text-animation");
             } },
-            {selector: '.content-parallax-4', offset: 350, callback: function(){
-                $(".content-parallax-4 .begin-position-triangle").addClass("triangle-animation");
-                $(".content-parallax-4 .begin-position-vacSubtitble").addClass("vacSubtitble-animation");
+            {selector: '.main-whysection-content', offset: 350, callback: function(){
+                $(".main-whysection-content .begin-position-triangle").addClass("triangle-animation");
+                $(".main-whysection-content .begin-position-vacSubtitble").addClass("vacSubtitble-animation");
+            } },
+            {selector: '.slider-card-img', offset: 50, callback: function(){
+                $(".slider-card-img").addClass("slider-card-img-animation");
             } },
 
 
