@@ -1,0 +1,43 @@
+# Site settings
+title: Software development company | Agile Development
+keywords: Freshcode, blog, software development, web development methods, outsourcing, technologies, news
+description: Freshcode is a software development outsourcing company with a team of web and mobile developers who provide a wide range of services following agile methods.
+email: alex.freshcode@gmail.com
+baseurl: ""
+url: "https://freshcodeit.com"
+twitter_username: "@FreshCode1"
+github_username: "Fresh-code"
+future: true
+# Build settings
+gems:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+show_drafts: false
+adaptive_image:
+     cache: 2592000
+     srcset:
+       - 1920
+       - 1000
+       - 600
+       - 320
+     sizes:
+       - 1920px
+       - 100vw
+include:
+  - _pages
+
+sass:
+     sass_dir: _sass/scss
+     style: compressed
+defaults:
+  - values:
+      layout: "default"
+
+markdown: kramdown
+permalink: pretty
+
+page_gen:
+  - data: 'single'
+    template: 'single_vacancy'
+    name: 'title_page'
+    dir: 'vacancies'
