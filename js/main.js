@@ -32,8 +32,11 @@ $(function(){
                 loaded: function(number) {
                     showCurrentSlide(number, '.slider-number-vertical');
                 },
-                start: function(number) {},
+                start: function(number) {
+                    $('#slides-vertical .slidesjs-navigation img').hide();
+                },
                 complete: function(number) {
+                    $('#slides-vertical .slidesjs-navigation img').show();
                     showCurrentSlide(number, '.slider-number-vertical');
                 }
             },
