@@ -337,6 +337,7 @@ var Animation = function(){
             {selector: '.about-f-section', offset: 1000, callback: function(){
                 $(".about .next").addClass("next-animation");
                 $(".about .block .text-block").addClass("text-block-animation");
+                $(".about .about-arrow-big").addClass("about-arrow-animation");
             } },
             {selector: '.about-why-section', offset: 150, callback: function(){
                 $(".about .about-why-section").addClass("about-why-section-animation");
