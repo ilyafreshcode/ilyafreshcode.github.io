@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+//import other
+@import "../materialize/materialize";
+
+//import base styles
+@import "base";
+
+//import atoms
+@import "./atoms/buttons";
+@import "./atoms/parallax";
+@import "./atoms/quotes";
+@import "./atoms/hamburger";
+@import "./atoms/keyframes";
+
+//import molecules
+@import "./molecules/menu";
+@import "./molecules/footer";
+@import "./molecules/modal";
+@import "./molecules/slider";
+@import "./molecules/lines";
+
+//import organisms
+@import "./organisms/vacancy";
+@import "./organisms/about";
+@import "./organisms/single";
+@import "./organisms/main";
+@import "./organisms/contacts";
+@import "./organisms/review";
+
+

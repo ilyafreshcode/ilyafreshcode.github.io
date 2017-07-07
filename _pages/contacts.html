@@ -1,0 +1,31 @@
+---
+permalink: /contacts
+
+title: Контакты - Freshcode
+---
+<div class="container mobile">
+    {% include lines.html %}
+    <div class="contacts">
+        <div class="title-section transition-animation-slow">
+            <h2 class="title">Контакты</h2>
+            <hr class="line">
+        </div>
+        <div class="send-form">
+            <div class="img-fly">
+                <img src="/images/slices/icon_fly.svg" class="img-fly-position transition-animation-slow">
+            </div>
+        </div>
+
+       <div class="form-content">
+           <div class="iframe-border">
+               <iframe class="frame" scrolling="no" src="{{site.data.contacts.iframe}}" frameborder="0"></iframe>
+           </div>
+       </div>
+
+        <div class="subtext transition-animation">{{site.data.contacts.form.title}}</div>
+        <div class="gray-block"></div>
+        <div class="lines-bg-1"><div class="line-bg-tr"></div></div>
+        <div class="lines-bg-sq"></div>
+
+    </div>
+</div>

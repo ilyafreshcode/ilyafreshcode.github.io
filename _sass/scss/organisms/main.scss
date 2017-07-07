@@ -1,0 +1,697 @@
+@import "../mixins";
+@import "../variables";
+.main-title {
+  width: 100%;
+
+  h3 {
+    text-transform: uppercase;
+    font: {
+      family: $font-style-caption;
+      size: 100px;
+      weight: 300;
+    }
+
+
+    @include breakpoint($screen-default) {
+      font-size: 45px;
+    }
+  }
+
+  span {
+    font: {
+      size: $font-size-big;
+      weight: 400;
+    }
+
+    @include breakpoint($screen-default) {
+      margin: 0 auto;
+      width: 250px;
+    }
+
+  }
+}
+
+.main-img {
+  img {
+    height: auto;
+    width: 105%;
+    @include breakpoint($screen-default){
+      width: 1%;
+    }
+  }
+
+  @include breakpoint($screen-default){
+    display: none;
+  }
+}
+
+.main-img-mobile{
+  display: none;
+  position: relative;
+  margin-right: -15px;
+
+  @include breakpoint($screen-default){
+    display: block;
+  }
+
+  img {
+    height: auto;
+    width: 108%;
+  }
+
+}
+
+.team-img {
+  position: absolute;
+  margin: -33px 0 0 -94px;
+  z-index: -1;
+  color: $subtext-color;
+  font-size: 242px;
+  line-height: 168px;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+  width: 120%;
+
+  @include breakpoint($screen-default){
+    font-size: 82px;
+    margin: -177px 0 0 -16px;
+  }
+}
+
+.description {
+  position: absolute;
+  margin: {
+    top: -98px;
+  }
+  width: 620px;
+
+  @include breakpoint($screen-default) {
+    width: 100%;
+  }
+
+  h3 {
+    font: {
+      size:  $font-size-big * 2;
+      weight: 700;
+    }
+    margin-bottom: 50px;
+
+    @include breakpoint($screen-default) {
+      font-size:  $font-size-big * 1.5;
+      width: 100%;
+    }
+  }
+
+  span {
+    display: inline-block;
+    margin-top: -20px;
+    font: {
+      size: $font-size-big + 2px;
+      weight: 400;
+    }
+
+    @include breakpoint($screen-default) {
+      font-size: $font-size-base * 1.3;
+    }
+
+  }
+
+}
+
+.main-caption-content {
+  position: relative;
+  margin-top: -97%;
+  height: 950px;
+
+  @-moz-document url-prefix() {
+    margin-top: -1140px;
+    @include tabletVersion{
+      margin-top: -1050px;
+    }
+  }
+
+  @include breakpoint($screen-default){
+    margin-top: -135%;
+    height: 550px;
+    @-moz-document url-prefix() {
+      margin-top: -380px;
+    }
+  }
+
+  .title-animation{
+    animation-name: fadeInTitle;
+  }
+  .caption-text{
+    @include beginPosition(0, 24%);
+  }
+
+}
+
+.main-team-content {
+  position: relative;
+  height: 550px;
+  margin-top: -100px;
+  width: 100%;
+  @include breakpoint($screen-default){
+    margin-top: -60px;
+  }
+
+  .qopen-animation {
+    animation-name: fadeInQuotesOpen;
+  }
+
+  .begin-position-qopen {
+    @include beginPosition(0, 250%);
+  }
+
+  .qclose-animation {
+    animation-name: fadeInQuotesClose;
+  }
+
+  .begin-position-qclose {
+    @include beginPosition(0, -120%);
+  }
+
+  .text-animation{
+    animation-name: fadeInText;
+  }
+
+  .team-animation{
+    animation-name: fadeInText;
+  }
+
+  .begin-position-text{
+    @include beginPosition(24%, 0);
+  }
+
+  .begin-position-team{
+    @include beginPosition(24%, 0);
+  }
+
+  .card-style {
+    font: {
+      size: $font-size-big;
+      weight: 500;
+    }
+
+    @include breakpoint($screen-default){
+      font-size: $font-size-base - 2px;
+    }
+
+    .text {
+      font: {
+        size:  $font-size-base;
+        weight: 400;
+      }
+      @include breakpoint($screen-default){
+        font-size: $font-size-base - 2px;
+      }
+    }
+
+    .name {
+      margin-top: 10px;
+    }
+
+    .job {
+      color: $grey;
+      font: {
+        size: 20px;
+        weight: 400;
+      }
+      @include breakpoint($screen-default){
+        font-size: $font-size-base;
+      }
+    }
+
+  }
+  .send-cv-position {
+    display: inline-block;
+    position: relative;
+    margin: {
+      top: 70px;
+      left: 400px;
+    }
+    @include breakpoint($screen-default) {
+      margin: {
+        top: 270px;
+        left: 0;
+      }
+    }
+  }
+
+  .card {
+    margin-top: 0 !important;
+  }
+
+  .vertical-box {
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+    position: relative;
+    width: 393px;
+    margin: -297px -30px 0 0;
+
+    @include breakpoint($screen-default) {
+      margin-top: -66px;
+      margin-right: 0px;
+      width: 251px;
+      height: 575px;
+    }
+
+    .card-style{
+      height: 290px;
+
+      @include breakpoint($screen-default) {
+        height: 412px;
+      }
+    }
+
+    .slidesjs-container{
+      height: 702px !important;
+      @include breakpoint($screen-default) {
+        height: 620px !important;
+      }
+    }
+
+    .slide-num {
+      font-size: $font-size-base;
+      margin: 0 0 15px 0;
+    }
+    .slidesjs-navigation {
+      height: 34px;
+      padding: 5px;
+      display: inline-block;
+      margin: -10px 0 15px 21px;
+    }
+  }
+
+  .horizontal-box {
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+    margin-top: 133px;
+    position: absolute;
+    width: 585px;
+    .slidesjs-container{
+      height: 370px !important;
+    }
+    @include breakpoint($screen-default) {
+      margin-top: 560px;
+      width: 251px;
+      height: 608px;
+      .slidesjs-container{
+        height: 608px !important;
+      }
+    }
+    .card-content{
+      @include breakpoint($screen-default) {
+        height: 350px;
+      }
+      padding: 20px;
+    }
+
+
+    .card-image {
+      float: left;
+      @include breakpoint($screen-default) {
+        float: none;
+      }
+    }
+    img {
+      max-width: none !important;
+    }
+
+    .slide-num {
+      font-size: $font-size-base;
+      margin: 0 0 15px 0;
+    }
+
+    .slidesjs-navigation {
+      position: absolute;
+      padding: 5px;
+      display: inline-block;
+      margin: -53px 0 0 308px;
+      z-index: 100;
+    }
+
+    .card-content-1 {
+      margin-left: 290px;
+      @include breakpoint($screen-default){
+        margin-left: 0;
+      }
+    }
+
+  }
+
+  .box-animation{
+    animation-name: fadeInBox;
+  }
+
+  .begin-position-box{
+    @include beginPosition(0, 15%);
+  }
+
+  .video-team{
+    margin-top: 6px;
+    z-index: 1000;
+
+    .grey-block{
+      display: block;
+      background-color: $grey-light;
+      position: relative;
+      margin-left: 25%;
+      height: 496px;
+      width: 75%;
+      z-index: -10;
+
+      @include breakpoint($screen-default){
+        margin-top: -66px;
+        margin-left: 0;
+        height: 400px;
+      }
+
+    }
+
+    .dot-block{
+      background: {
+        image: url("/images/Paterns/02_patern.jpg");
+        repeat: repeat;
+      };
+      display: block;
+      position: relative;
+      height: 510px;
+      opacity: $opacity-bg;
+      margin: -390px 0 0 285px;
+      width: calc(100% - 285px);
+    }
+
+    .video-text{
+      color: $subtext-color;
+      font-size: $font-size-title + 100px;
+      float: right;
+      line-height: 150px;
+      font-weight: 700;
+      margin-right: -225px;
+      margin-top: -330px;
+      z-index: 10;
+    }
+    .text-rotation{
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+
+    .play-video{
+      position: relative;
+      margin-top: -450px;
+      height: 550px;
+      width: 95%;
+
+      .video-block{
+        position: absolute;
+        margin-left: -25px;
+        img{
+          height: auto;
+          width: 100%;
+        }
+      }
+
+      .play-img{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        height: 550px;
+        width: 85%;
+        img{
+          -webkit-filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.3));
+          filter: drop-shadow(0px 5px 10px  rgba(0, 0, 0, 0.3));
+          margin: 0 auto;
+          height: auto;
+          width: 10%;
+        }
+      }
+    }
+
+  }
+
+}
+
+.main-vacancy-content {
+  margin-top: 700px;
+  @include breakpoint($screen-default){
+    margin-top: 1477px;
+  }
+  .description {
+    margin-top: -55px;
+    @include breakpoint($screen-default) {
+      margin-top: -48px;
+      width: 280px;
+    }
+  }
+
+
+  .textnext-animation{
+    animation-name: fadeInTextNext;
+  }
+
+  .begin-position-text-next{
+    @include beginPosition(51%, 0);
+  }
+
+
+  .why-freshcode {
+    position: relative;
+
+    &:before {
+      content: ' ';
+      background: {
+        image: url("/images/Paterns/01_patern.jpg");
+        repeat: repeat;
+        position: 50% 0;
+      }
+      display: block;
+      position: relative;
+      margin-top: -220px;
+      width: 100%;
+      height: 500px;
+      z-index: -20;
+      opacity: $opacity-bg;
+    }
+
+    .why-freshcode-slides {
+      position: relative;
+      background-color: $green;
+      height: 400px;
+      margin: {
+        top: -300px;
+        left: 172px;
+      };
+      width: calc(100% - 172px);
+
+      @include breakpoint($screen-default){
+        margin-top: -210px;
+        margin-left: 0;
+        height: 799px;
+        width: 100%;
+      }
+
+      .slidesjs-container{
+        @include breakpoint($screen-default){
+          height: 800px !important;
+        }
+      }
+
+    }
+
+    &:after {
+      content: ' ';
+      display: block;
+      background-color: $grey-light;
+      position: relative;
+      margin-left: 172px;
+      height: 50px;
+      width: calc(100% - 172px);
+      @include breakpoint($screen-default) {
+        margin-left: 0;
+        width: 100%;
+      }
+    }
+
+    .slider-top {
+      top: -60px;
+      float: right;
+      position: relative;
+      width: 100%;
+
+      .team-slider{
+        @include breakpoint($screen-default) {
+          height: 550px;
+        }
+      }
+
+    }
+  }
+
+}
+
+.main-whysection-content {
+  margin-top: 61px;
+
+  .vac-description {
+    position: relative;
+    img {
+      float: left;
+      margin: 0 37px;
+
+      @include breakpoint($screen-default){
+        margin: 0;
+        width: 120px;
+      }
+
+    }
+
+    h3 {
+      display: inline-block;
+      font: {
+        size: 40px;
+        weight: 700;
+      }
+      margin: 25px 0;
+
+      @include breakpoint($screen-default){
+        font-size: 30px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      font: {
+        size: $font-size-big + 2px;
+        weight: 400;
+      }
+      width: 70%;
+      @include breakpoint($screen-default){
+        font-size: $font-size-big - 1px;
+        width: 100%;
+      }
+    }
+
+    .eye-animation {
+      animation-name: fadeInEye;
+    }
+
+    .vac-text-animation {
+      animation-name: fadeInVactext;
+    }
+
+    .begin-position-img {
+      @include beginPosition(0, -50%);
+    }
+
+    .begin-position-vac-text {
+      @include beginPosition(12%, 0);
+    }
+
+  }
+
+  .all-vacancy-position {
+    margin: 10px 0 0 250px;
+    @include breakpoint($screen-default){
+      margin: 0 0 0 0;
+    }
+  }
+
+  .vacancy-img {
+    position: relative;
+
+    &:before {
+      content: '';
+      background: {
+        image: url("/images/Paterns/02_patern.jpg");
+        repeat: repeat;
+      };
+      display: block;
+      position: relative;
+      height: 343px;
+      opacity: $opacity-bg;
+      margin: -185px 0 0 290px;
+      width: calc(100% - 290px);
+      z-index: -100;
+
+      @include breakpoint($screen-default){
+        float: none;
+        margin: -312px 0 0 0;
+        height: 301px;
+        width: 100%;
+      }
+    }
+
+  }
+
+  .vacancy-img-text {
+    margin: -157px 0 0 290px;
+    position: relative;
+    z-index: -10;
+    @include breakpoint($screen-default){
+      margin: -12px 0 0 -15px;
+    }
+
+    img {
+      height: auto;
+      width: 108%;
+      @include breakpoint($screen-default){
+        width: 112%;
+      }
+
+    }
+  }
+
+  .lines-bg {
+    background: {
+      image: url("/images/Paterns/01_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: block;
+    position: relative;
+    margin-top: -295px;
+    width: 490px;
+    height: 450px;
+    z-index: -20;
+    opacity: $opacity-bg;
+
+    @include breakpoint($screen-default) {
+      margin: -70px 0 0 0;
+      width: 100%;
+      height: 200px;
+    }
+
+    .line-bg-tr {
+      width: 0;
+      height: 0;
+      border-top: 500px solid $white;
+      border-left: 500px solid transparent;
+      @include breakpoint($screen-default) {
+        border-top: 280px solid $white;
+        border-left: 280px solid transparent;
+      }
+    }
+
+  }
+
+  .triangle-animation {
+    animation-name: fadeInTriagle;
+  }
+
+  .begin-position-triangle {
+    @include beginPosition(-20%, 0);
+  }
+
+
+  .vacSubtitble-animation {
+    animation-name: fadeInVacSubtitle;
+  }
+
+  .begin-position-vacSubtitble{
+    @include beginPosition(0, 20%);
+  }
+}

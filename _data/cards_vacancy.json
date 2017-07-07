@@ -1,0 +1,12 @@
+{"first_section":
+  {"subtext":"Вакансии",
+    "card_type":[
+      {"developer":"Trainee Developer","status":"1 May","link_to":"trainee_developer"},
+      {"developer":"Junior JS developer","status":"1","link_to":"junior_js_developer"},
+      {"developer":"Middle JS developer","status":"1 April","link_to":"middle_js_developer"},
+      {"developer":"Project Manager","status":"1 July","link_to":"project_manager"},
+      {"developer":"Event Manager","status":"1 July","link_to":"event_manager"},
+      {"developer":"Junior .NET developer","status":"1 july","link_to":"junior_net_developer"}
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+---
+permalink: /review
+
+title: Отзывы сотрудников - Freshcode
+---
+<div class="container mobile lines-fix">
+    {% include lines.html %}
+    <div class="review">
+        <div class="triangle-grey"></div>
+        <div class="lines-block"></div>
+        <div class="title-section transition-animation">
+            <h2 class="title">{{site.data.review.title}}</h2>
+            <hr class="line">
+        </div>
+        <div class="text-bg text-rotation review-text-animation transition-animation">Отзывы</div>
+        <div class="cards-review">
+            {% for review in site.data.review.reviews %}
+            <div class="card {{review.class}} begin-position-cards transition-animation">
+                <div class="card-image">
+                    <img src="{{review.img}}">
+                </div>
+                <div class="card-style card-content">
+                    <p class="text">{{review.text}}</p>
+                    <p class="name">{{review.name}}</p>
+                    <p class="job">{{review.title}}</p>
+                </div>
+            </div>
+
+            {% if forloop.index == 1 %}
+            <div class="rv-quotes begin-position-rvqclose transition-animation">
+                <img src={{ site.data.links.images.quotes-2 }} />
+            </div>
+            {% elsif forloop.index == 2 %}
+            <div class="grey-block"></div>
+            {% endif %}
+
+            {% endfor %}
+            <div class="rv-quotes-2 begin-position-rvqopen transition-animation">
+                <img src={{ site.data.links.images.quotes-1 }} />
+            </div>
+        </div>
+        <div class="send-cv">
+            <a href="#CVForm" class="button hide-mobile"><span class="transition-animation-btn btn-animation">Отправить резюме</span></a>
+            <a href="/contacts" class="button show-mobile">Отправить резюме</a>
+        </div>
+        <div class="dot-block"></div>
+        <div class="line-bg"></div>
+    </div>
+</div>

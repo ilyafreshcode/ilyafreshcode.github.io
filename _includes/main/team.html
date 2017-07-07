@@ -1,0 +1,86 @@
+<div class="main-team-content">
+    <div class="quotes-2 float-right begin-position-qopen transition-animation">
+        <img src={{ site.data.links.images.quotes-1 }}  />
+    </div>
+
+    <section class="description begin-position-text transition-animation">
+        <h3>{{ site.data.main.sections.team.title }}</h3>
+        <span>{{ site.data.main.sections.team.text }}</span>
+    </section>
+
+
+    <a href="#CVForm" class="button send-cv-position hide-mobile"><span class="transition-animation-btn btn-animation">Отправить резюме</span></a>
+    <a href="/contacts" class="button send-cv-position show-mobile">Отправить резюме</a>
+
+    <div class="quotes begin-position-qclose transition-animation">
+        <img src={{ site.data.links.images.quotes-2 }} />
+    </div>
+
+    <div class="team-img begin-position-team transition-animation">Команда</div>
+
+
+    <section id="slides-vertical" class="vertical-box float-right begin-position-box transition-animation">
+        {% for c in site.data.main.vertical-cards %}
+        <div class="card">
+            <div class="card-image">
+                <img src={{ c.img }}>
+            </div>
+
+            <div class="card-style card-content">
+                <p class="slide-num"><span class="slider-number-vertical"></span> /
+                    <span class="all-vertical-num"></span>
+                </p>
+                <p class="text">{{ c.text }}</p>
+                <p class="name">{{ c.name }}</p>
+                <p class="job">{{ c.job }}</p>
+            </div>
+            <a href="#" class="slidesjs-previous slidesjs-navigation"><img src={{ site.data.links.images.left-arrow }} /></a>
+            <a href="#" class="slidesjs-next slidesjs-navigation" style="margin-left: 7px;" ><img src={{ site.data.links.images.right-arrow }} /></a>
+            </div>
+        {% endfor %}
+    </section>
+
+
+    <section id="slides-horizontal" class="horizontal-box begin-position-box transition-animation">
+        {% for c in site.data.main.horizontal-cards %}
+        <div class="card horizontal">
+            <div class="card-image">
+                <img src={{ c.img }}>
+            </div>
+            <div class="card-style card-content">
+                <p class="slide-num"><span class="slider-number-horizontal"></span> /
+                    <span class="all-horizontal-num"></span>
+                </p>
+                <p class="text">{{ c.text }}</p>
+                <p class="name">{{ c.name }}</p>
+                <p class="job">{{ c.job }}</p>
+
+
+            </div>
+
+        </div>
+        {% endfor %}
+
+        <a href="#" class="slidesjs-previous slidesjs-navigation"><img src={{ site.data.links.images.left-arrow }} /></a>
+        <a href="#" class="slidesjs-next slidesjs-navigation" style="margin-left: 338px;" ><img src={{ site.data.links.images.right-arrow }} /></a>
+    </section>
+
+
+    <section class="video-team">
+        <div class="grey-block"></div>
+        <div class="dot-block hide"></div>
+        <div class="video-text text-rotation hide">Видео</div>
+        <div class="play-video hide">
+            <div class="video-block">
+                <img src="/images/video-img.png" />
+            </div>
+            <div class="play-img vertical-middle">
+                <img src="/images/slices/icon_play.svg" />
+            </div>
+        </div>
+    </section>
+
+
+</div>
+
+

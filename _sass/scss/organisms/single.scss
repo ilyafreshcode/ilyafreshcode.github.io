@@ -1,0 +1,279 @@
+@import "../mixins";
+@import "../variables";
+
+.single-section {
+  margin-top: 95px;
+  display: flex;
+  flex-direction: row;
+
+  @include breakpoint(1024px) {
+    display: inline-block;
+    width: 280px;
+    margin-top: 60px;
+    flex-direction: column;
+  }
+
+  .experience {
+    width: 100%;
+    position: relative;
+
+    @include breakpointDesktop {
+      width: 50%;
+      margin-bottom: 140px;
+    }
+
+    .top-title {
+      background-color: $shadow;
+      width: 100%;
+      margin-top: -95px;
+    }
+
+    .vacancy-title {
+      color: $black;
+      font-size: 28px;
+      font-weight: 700;
+      text-align: left;
+      width: 200px;
+      padding-top: 120px;
+      z-index: 2;
+      position: relative;
+      top: 11px;
+
+      @include breakpointDesktop {
+        line-height: 55px;
+        margin-left: -50px;
+        width: 100%;
+        font-size: 40px;
+        padding-top: 190px;
+        top: 13px;
+      }
+    }
+  }
+
+  .demands-blocks {
+    margin-top: 35px;
+    position: relative;
+
+    @include breakpointDesktop {
+      margin-top: 90px;
+    }
+
+    .bckg-line {
+      background-image: url(/images/Paterns/01_patern.jpg);
+      height: 97%;
+      width: 100%;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.1;
+      margin-top: 35px;
+
+      @include breakpointDesktop {
+        height: 96.5%;
+      }
+    }
+
+  }
+
+  .vacancy-form-animatino{
+    animation-name: vacancyForm;
+  }
+
+  .vacancy-form{
+    @include beginPosition(0, 10%);
+  }
+
+  .vacancy-offer{
+    @include beginPosition(10%, 0);
+  }
+
+  .vacancy-plus{
+    @include beginPosition(10%, 0);
+  }
+
+  .vacancy-job{
+    @include beginPosition(10%, 0);
+  }
+
+  .job-animation{
+    animation-name: vacancyJobs;
+  }
+
+  .job,
+  .plus,
+  .offer {
+    width: 100%;
+
+    @include tabletVersion {
+      width: 102%;
+    }
+
+    @include breakpoint(lg-max) {
+      width: 115%;
+    }
+
+    .title {
+      color: $black;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 23px;
+      text-align: left;
+      margin-left: -15px;
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+      margin-bottom: 42px;
+
+      @include breakpointDesktop {
+        font-size: 20px;
+        line-height: 26px;
+        margin-left: -25px;
+        margin-bottom: 50px;
+      }
+    }
+
+    p {
+      color: $black;
+      font-size: 13px;
+      font-weight: 400;
+      text-align: left;
+      margin: 0 0 0 20px;
+      width: 250px;
+
+      @include breakpointDesktop {
+        font-size: 16px;
+        width: 90%;
+      }
+    }
+
+    hr {
+      width: 10px;
+      height: 2px;
+      border: 0;
+      margin: 0;
+      background-color: $black;
+
+      @include breakpointDesktop {
+        width: 20px;
+      }
+    }
+
+    .inline {
+      display: flex;
+      align-items: center;
+      margin: 20px 0;
+    }
+  }
+
+  .job {
+    .title {
+      width: 120px;
+    }
+  }
+  .plus {
+    .title {
+      width: 145px;
+      margin-top: 30px;
+
+      @include breakpointDesktop {
+        margin-top: 70px;
+      }
+    }
+  }
+  .offer {
+    .title {
+      width: 160px;
+      margin-top: 30px;
+
+      @include breakpointDesktop {
+        margin-top: 70px;
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    margin-bottom: 75px;
+
+    @include breakpointDesktop {
+      width: 50%;
+      margin-top: 340px;
+      margin-bottom: 0;
+    }
+
+    .bckg-form {
+      flex-direction: row;
+      margin: -15px 0 0 -15px;
+      width: 280px;
+      height: 493px;
+      background-color: $green;
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      z-index: -1;
+
+      @include tabletVersion {
+        margin: -59px 0 0 25px;
+        width: 427px;
+        height: 722px;
+      }
+
+      @include breakpoint(lg-max) {
+        margin: -65px 0 0 80px;
+        width: 427px;
+        height: 722px;
+      }
+    }
+
+    .form-content {
+      padding: 15px 0 0 23px;
+      height: 497px;
+      width: 100%;
+      box-shadow: -5px 5px 40px 0 rgba(0, 0, 0, 0.15);
+      background-color: $white;
+      position: relative;
+      overflow: hidden;
+
+      @include tabletVersion {
+        padding: 30px 12px 0 35px;
+        margin-right: -20%;
+        margin-top: -12px;
+        height: 722px;
+        width: 427px;
+      }
+
+      @include breakpoint(lg-max) {
+        padding: 30px 12px 0 35px;
+        margin-right: -45%;
+        margin-top: -19px;
+        height: 722px;
+        width: 427px;
+      }
+    }
+
+    .iframe-border {
+      height: 480px;
+      width: 104%;
+      overflow: hidden;
+
+      @include breakpointDesktop {
+        height: 705px;
+      }
+    }
+
+    .frame {
+      margin: -12px 0 0 -18px;
+      height: 580px;
+      width: 100%;
+      overflow: hidden;
+
+      @include breakpointDesktop {
+        height: 770px;
+        margin: -23px 0 0 -18px;
+      }
+    }
+  }
+}

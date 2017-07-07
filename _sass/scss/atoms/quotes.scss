@@ -1,0 +1,59 @@
+@import "../mixins";
+@import "../variables";
+
+.quotes {
+  position: relative;
+  margin: 95px 0 0 -50px;
+  width: 100px;
+
+  @include breakpoint($screen-default) {
+    margin: 50px 0 102px -15px;
+    img{
+      height: auto;
+      width: 37%;
+    }
+  }
+}
+
+.quotes-2 {
+  position: relative;
+  margin: 662px -70px 0 0;
+  width: 100px;
+  z-index: 700;
+
+  @include breakpoint($screen-default){
+    position: absolute;
+    float: none !important;
+    margin: 1667px 0 0 230px;
+    img{
+      height: auto;
+      width: 37%;
+    }
+  }
+}
+
+.rv-quotes{
+  margin: 0 0 -37px -45px;
+  z-index: 1000;
+  @include breakpoint($screen-default){
+    float: right;
+    margin: -1299px 225px 0 0;
+    img{
+      height: auto;
+      width: 50px;
+    }
+  }
+}
+.rv-quotes-2{
+  float: right;
+  margin: -245px -45px 0 0;
+  @include breakpoint($screen-default){
+    float: none;
+    position: absolute;
+    margin: -34px 0 0 225px;
+    img{
+      height: auto;
+      width: 50px;
+    }
+  }
+}

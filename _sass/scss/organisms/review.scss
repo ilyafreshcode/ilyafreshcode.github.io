@@ -1,0 +1,293 @@
+@import "../mixins";
+@import "../variables";
+.review {
+  display: block;
+
+  @include breakpoint($screen-default){
+    display: inline-block;
+    width: 100%;
+  }
+
+  .title-animation{
+    animation-name: reviewTitle;
+  }
+
+  .title-section {
+    margin-top: -2157px;
+
+    @include beginPosition(17%, 0);
+
+    @include breakpoint($screen-default) {
+      margin-top: -2932px;
+    }
+
+    .title {
+      display: inline-block;
+      margin: 155px 0 110px -28px;
+      line-height: 1.2;
+      font-family: $font-style-caption;
+      font-size: $font-size-title - 4px;
+      font-weight: 300;
+      padding-top: 3px;
+      height: 76px;
+      text-transform: uppercase;
+      width: 510px;
+
+      @include breakpoint($screen-default){
+        font-size: $font-size-title - 50px;
+        height: 48px;
+        margin: 182px 0 110px -15px;
+        overflow: hidden;
+      }
+
+    }
+
+    .line {
+      width: 670px;
+      margin: 30px 0 0;
+
+      @include breakpoint($screen-default){
+        margin-top: -100px;
+        width: 195px;
+      }
+    }
+  }
+
+  .cards-animation{
+    animation-name: reviewCards;
+  }
+
+  .begin-position-cards{
+    @include beginPosition(15%, 0);
+  }
+
+  .cards-review {
+    margin-top: -454px;
+
+    @include breakpoint($screen-default){
+      margin-top: -648px;
+    }
+
+
+    .card {
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+      width: 443px;
+      z-index: -1;
+
+      @include breakpoint($screen-default){
+        width: 245px;
+      }
+    }
+
+    .card-style {
+      font: {
+        size: $font-size-big;
+        weight: 500;
+      }
+      padding: 35px;
+      @include breakpoint($screen-default){
+        padding: 20px;
+      }
+
+      .text {
+        font: {
+          size: $font-size-base;
+          weight: 400;
+        }
+      }
+
+      .name {
+        margin-top: 10px;
+      }
+
+      .job {
+        color: $grey;
+        font: {
+          size: 20px;
+          weight: 400;
+        }
+      }
+    }
+
+    .krasnogor {
+      float: right;
+      margin-top: -160px;
+
+      @include breakpoint($screen-default){
+        float: none;
+        margin: 765px 0 0 0;
+      }
+
+
+      .card-style{
+        margin-top: -50px;
+      }
+      img {
+        top: -60px;
+      }
+    }
+    .troian{
+      @include breakpoint($screen-default){
+        float: right;
+        margin-top: -1278px;
+      }
+    }
+    .logvinova{
+      float: right;
+      @include breakpoint($screen-default){
+        margin-top: 50px;
+      }
+    }
+    .gonchar {
+      margin-top: 163px;
+
+      @include breakpoint($screen-default){
+        margin-top: 700px;
+      }
+
+      .card-style{
+        margin-top: -70px;
+        padding-top: 15px;
+      }
+      img {
+        top: -68px;
+        width: 107.5%
+      }
+    }
+  }
+
+  .send-cv {
+    margin: 46px 0 350px 50%;
+
+    @include breakpoint($screen-default){
+      float: right;
+      margin: 104px 0 100px 0;
+    }
+
+  }
+
+  .triangle-grey {
+    position: relative;
+    margin-top: 95px;
+    width: 0;
+    height: 0;
+    border-bottom: 370px solid $grey-light;
+    border-right: 370px solid transparent;
+    z-index: -10;
+    @include breakpoint($screen-default){
+      margin-top: 70px;
+      border-bottom: 180px solid $grey-light;
+      border-right: 180px solid transparent;
+    }
+  }
+  .lines-block {
+    background: {
+      image: url("/images/Paterns/01_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: inline-block;
+    position: relative;
+    margin: -150px 0 0 50%;
+    width: 25%;
+    height: 1901px;
+    z-index: -20;
+    opacity: $opacity-bg;
+
+    @include breakpoint($screen-default){
+      margin-top: -137px;
+      height: 2733px;
+      width: 50%;
+    }
+  }
+
+  .review-text-animation{
+    animation-name: reviewSubtext;
+  }
+
+  .text-bg {
+    color: $subtext-color;
+    font-size: $font-size-title + 170px;
+    display: inline-block;
+    position: relative;
+    margin: 439px 0 0 -37px;
+    line-height: 150px;
+    font-weight: 700;
+    z-index: -10;
+
+    @include breakpoint($screen-default){
+      font-size: $font-size-title + 5px;
+      margin: 484px 0 0 -186px;
+    }
+  }
+
+  .text-rotation{
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+  .grey-block{
+    background-color: $grey-light;
+    position: relative;
+    margin: -440px 0 -500px 50%;
+    width: 50%;
+    height: 887px;
+    z-index: -10;
+
+    @include breakpoint($screen-default){
+      display: none;
+    }
+  }
+
+  .dot-block{
+    background: {
+      image: url("/images/Paterns/02_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: block;
+    position: relative;
+    margin: -800px 0 0 0;
+    width: 50%;
+    height: 530px;
+    z-index: -20;
+    opacity: $opacity-bg;
+
+    @include breakpoint($screen-default){
+      display: none;
+      margin-top: -750px;
+    }
+  }
+
+  .line-bg{
+    background-color: #f1f1f1;
+    position: relative;
+    height: 7px;
+    width: 50%;
+    margin-bottom: 185px;
+    @include breakpoint($screen-default){
+      float: right;
+      margin: 97px -209px 0 0;
+    }
+  }
+
+  .rv-qclose-animation{
+    animation-name: reviewQClose;
+  }
+
+  .begin-position-rvqclose{
+    @include beginPosition(0, -230%);
+  }
+
+  .rv-qopen-animation{
+    animation-name: reviewQOpen;
+  }
+
+  .begin-position-rvqopen{
+    @include beginPosition(0, 200%);
+  }
+
+}

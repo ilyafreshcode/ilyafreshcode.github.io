@@ -1,0 +1,8 @@
+  <div class="plus vacancy-plus transition-animation">
+    <div class="title">{{page.plus_title}}</div>
+    {% for item in page.plus_body %}
+    <div class="inline">
+      <hr><p>{{item.title}}</p>
+    </div>
+    {% endfor %}
+  </div>

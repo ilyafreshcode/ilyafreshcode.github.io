@@ -1,0 +1,32 @@
+<div class="green-card">
+    <p class="slide-num">
+      <span class="slider-number-horizontal-1"></span> /
+      <span class="all-horizontal-num-1"></span>
+    </p>
+</div>
+<section id="slides-horizontal-1" class="team-slider">
+  <a href="#" class="slidesjs-previous slidesjs-navigation link-nav" style="margin: 18px -230px 0 0;">
+    <img src={{ site.data.links.images.left-arrow-white }} />
+  </a>
+  <a href="#" class="slidesjs-next slidesjs-navigation link-nav" style="margin: 18px -260px 0 0;">
+    <img src={{ site.data.links.images.right-arrow-white }} />
+  </a>
+  {% for slides in site.data.about.third_section.slider %}
+  <div class="card green-card horizontal">
+
+    <div class="body-slide get-num">
+      {% for slide in slides %}
+      <div class="block-slide">
+        <div class="card-image">
+          <img src="{{slide.img}}" alt="" class="slider-card-img transition-animation">
+        </div>
+        <div class="text">
+          {{slide.text}}
+        </div>
+      </div>
+
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</section>

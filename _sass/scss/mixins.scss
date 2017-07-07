@@ -1,0 +1,75 @@
+@import "variables";
+
+@mixin breakpoint($device) {
+  @if ($device == xs) {
+    // until 767
+    @media only screen and (max-width: $screen-xs-max) {
+      @content;
+    }
+  } @else if ($device == sm) {
+    // from 768px
+    @media only screen and (min-width: $screen-sm-min) {
+      @content;
+    }
+  } @else if ($device == md) {
+    // from 992px
+    @media only screen and (min-width: $screen-md-min) {
+      @content;
+    }
+  } @else if ($device == lg) {
+    // from 1200px - open end
+    @media only screen and (min-width: $screen-lg-min) {
+      @content;
+    }
+  }
+  @else if ($device == lg-min) {
+    // from 1200px - open end
+    @media only screen and (min-width: 1201px) {
+      @content;
+    }
+  }
+  @else if ($device == lg-max) {
+    // from 1200px - open end
+    @media only screen and (min-width: 1281px) {
+      @content;
+    }
+  }
+  @else {
+    //custom breakpoint
+    @media only screen and (max-width: $device) {
+      @content;
+    }
+  }
+}
+
+
+@mixin breakpointDesktop {
+  @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+
+@mixin tabletVersion {
+  @media screen and (min-width: 1025px) and (max-width: 1280px) {
+    @content;
+  }
+}
+
+
+@mixin transition($speed, $delay) {
+  @include breakpointDesktop {
+    animation-duration: $speed;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(.4,0,.2,1);
+  }
+}
+
+
+@mixin beginPosition($left, $top){
+ @include breakpointDesktop{
+   opacity: 0;
+   transform: translate3d($left, $top, 0);
+ }
+}

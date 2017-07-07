@@ -1,0 +1,30 @@
+<div class="site-header-slice__fixer">
+    <div class="site-header-slice__background-2"></div>
+
+    <nav class="navigation-bar is-visible" data-nav-status="toggle">
+        <div class="container menu-content">
+            <a href="/"><img draggable="false" class="logo logo-d" src={{ site.data.links.images.menu-logo }} alt="Freshcode Logo"></a>
+
+
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="main-nav-menu">
+                {% assign p = page.url | replace:'/','' %}
+                {% for page in site.data.links.menu.pages %}
+                {% assign currentPage = {{page.link}} %}
+                <li><a href="/{{page.link}}" class="{% if p == currentPage %}active{% endif %} link" >{{page.text}}</a></li>
+                {% endfor %}
+                <li class="hide-mobile"><a href="#CVForm" class="button show-modal"><span class="transition-animation-btn btn-animation">Отправить резюме</span></a></li>
+                <li class="show-mobile"><a href="/contacts" class="button ">Отправить резюме</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% include modal.html %}
+
+</div>

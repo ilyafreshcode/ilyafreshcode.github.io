@@ -1,0 +1,100 @@
+{
+  "images": {
+    "menu-logo": "/images/logo_dark.svg",
+    "head-img" : "/images/main_pic_1.png",
+    "head-img-mobile" : "/images/img-caption-mobile.png",
+    "team" : "/images/Team.png",
+    "left-arrow" : "/images/slices/icon_arrow_left.svg",
+    "right-arrow" : "/images/slices/icon_arrow_right.svg",
+    "left-arrow-white" : "/images/slices/icon_arrow_left_white.svg",
+    "right-arrow-white" : "/images/slices/icon_arrow_right_white.svg",
+    "quotes-1" : "/images/slices/icon_quotes_1.svg",
+    "quotes-2" : "/images/slices/icon_quotes_2.svg",
+    "eye" : "/images/slices/icon_eye.svg"
+  },
+  "menu": {
+    "pages": [
+      {
+        "link": "",
+        "text": "Главная"
+      },
+      {
+        "link": "about",
+        "text": "О нас"
+      },
+      {
+        "link": "vacancy",
+        "text": "Вакансии"
+      },
+      {
+        "link": "review",
+        "text": "Отзывы сотрудников"
+      },
+      {
+        "link": "contacts",
+        "text": "Контакты"
+      }
+    ]
+  },
+  "footer" : {
+    "social" : [
+      {
+        "img": "/images/slices/icon_linkedin.svg",
+        "link": "https://www.linkedin.com/company/freshcode-it?trk=biz-companies-cym"
+      },
+      {
+        "img": "/images/slices/icon_facebook.svg",
+        "link": "https://www.facebook.com/FreshCode-1569539716705171/"
+      },
+      {
+        "img": "/images/slices/icon_twitter.svg",
+        "link": "https://twitter.com/FreshCode1"
+      },
+      {
+        "img": "/images/slices/icon_google_plus.svg",
+        "link": "https://plus.google.com/109449845191701968335"
+      },
+      {
+        "img": "/images/slices/icon_git_hub.svg",
+        "link": "https://github.com/fresh-code"
+      },
+      {
+        "img": "/images/slices/icon_bitbucket.svg",
+        "link": "https://bitbucket.org/fresh_code/"
+      },
+      {
+        "img": "/images/slices/icon_instagram.svg",
+        "link": "https://www.instagram.com/freshcode_it/"
+      }
+
+    ]
+  },
+  "vacancies_img": {
+    "chair": "/images/vacancies/chair_fullsize.png",
+    "troyanova": "/images/vacancies/troyanova_big.svg",
+    "vector": "/images/vacancies/vector_smart.svg",
+    "shadow": "/images/vacancies/shadow.svg",
+    "dote_small": "/images/vacancies/dote_small.svg",
+    "rectangle": "/images/vacancies/rectangle.svg",
+    "dote_big": "/images/vacancies/dote_big.svg",
+    "fresh": "/images/vacancies/freshlogo_grey.png"
+  },
+  "about_img": {
+    "triangle": "/images/triangle.png",
+    "arrow": "/images/about/arrow_down.svg",
+    "rectangle": "/images/about/bckg_rectangle.svg",
+    "team": "/images/about/team.png",
+    "big_triangle": "/images/about/big_triangle.jpg",
+    "bigger": "/images/about/bigger_rectangle.svg",
+    "dote_line": "/images/about/dote_line.svg",
+    "small_dote_line": "/images/about/small_doted_line.svg",
+    "dote_rectangle": "/images/about/dote_rectangle.svg",
+    "small_rectangle": "/images/about/small_rectangle.svg",
+    "target": "/images/about/target.svg",
+    "troyanova": "/images/about/troyanova_small.svg",
+    "rectangle_part_line": "/images/about/rectangle_part_line.svg",
+    "rectangle_part_dote": "/images/about/rectangle_part_dote.svg",
+    "shape": "/images/about/shape.svg",
+    "small_shape": "/images/about/small_arrow.svg"
+  }
+}

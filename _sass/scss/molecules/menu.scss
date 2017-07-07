@@ -1,0 +1,141 @@
+@import "../mixins";
+@import "../variables";
+
+.navigation-bar {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1001;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+
+  @include breakpoint($screen-lg){
+    padding: 0 35px;
+    overflow: hidden;
+  }
+  @include breakpoint($screen-default){
+    padding: 0 20px;
+  }
+
+
+
+  &.is-hidden {
+    opacity: 0;
+    -webkit-transform: translate(0, -60px);
+    -webkit-transition: -webkit-transform .5s, background .3s, color .3s, opacity 0.3s;
+  }
+
+  &.is-visible {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -webkit-transition: -webkit-transform .5s, background .3s, color .3s;
+  }
+
+  .main-nav-menu {
+    position: relative;
+    float: right;
+    margin-top: -15px;
+    @include breakpoint($screen-default) {
+      display: none;
+      margin-top: 5px;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    @include breakpoint($screen-default) {
+      text-align: center;
+      width: 100%;
+    }
+
+    li {
+      display: inline-block;
+      padding: 17px 15px;
+      text-transform: uppercase;
+      font: {
+        size: $font-size-base;
+        weight: 700;
+      }
+
+      &:last-child{
+        padding-right: 0;
+        margin-bottom: 12px;
+      }
+
+      @include breakpoint($screen-lg){
+        font: {
+          size: $font-size-base - 1px;
+        }
+      }
+      @include breakpoint($screen-menu-desktop){
+        font: {
+          size: $font-size-base - 2px;
+        }
+        padding: 17px 7px;
+      }
+
+      @include breakpoint($screen-default) {
+        font: {
+          size: $font-size-base - 3px;
+        }
+        display: block;
+        padding: 13px 7px;
+      }
+
+
+      .active {
+        color: $green-tint !important;
+      }
+
+      .link {
+        color: $black;
+        -webkit-transition: all 0.2s;
+      }
+      .link:hover {
+        cursor: pointer;
+        color: $green;
+        text-decoration: none;
+        -webkit-transition: all 0.2s;
+      }
+    }
+  }
+
+  .logo {
+    height: auto;
+    width: 181px;
+    @include breakpoint($screen-default){
+      width: 150px;
+    }
+  }
+
+  .menu-content {
+    padding: 15px 0;
+    @include breakpoint($screen-default){
+      padding: 12px 0 8px 0;
+    }
+  }
+
+  .active {
+    color: $green;
+  }
+}
+
+.mobile-menu-top{
+  background-color: rgba(255, 255, 255, 0.0);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.0);
+}
+.desctop-menu{
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}
+.scroll-menu{
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,28 @@
+<div class="first-section vacancies-section">
+  <div class="subtext transition-animation-slow">{{site.data.cards_vacancy.first_section.subtext}}</div>
+  <div class="card-section">
+    <div class="bckg-line"></div>
+    <div class="cards transition-animation">
+      {% for card in site.data.cards_vacancy.first_section.card_type %}
+      <div class="shadow-card">
+        <div class="single-card">
+          <hr class="top">
+          <hr class="right">
+          <hr class="left">
+          <hr class="bottom">
+          <hr class="angle">
+          <div class="developer">{{ card.developer }}</div>
+          <div class="status-block">
+            <div class="status"></div>
+            <div class="link transition-animation">
+              <a href="/vacancies/{{ card.link_to }}">
+                <span class="material-icons transition-animation-btn btn-arrow">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

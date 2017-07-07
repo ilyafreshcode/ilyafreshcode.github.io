@@ -1,0 +1,15 @@
+<div class="second-section">
+  <div class="reverse"></div>
+  <div class="line-rectangle"></div>
+  <div class="block">
+    {% for block in site.data.about.second_section %}
+    <div class="single-block">
+      <div class="mark">{{ block.count }}</div>
+      <div class="text-block transition-animation">
+        <div class="step">{{ block.step }}</div>
+        <div class="about-step">{{ block.about }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<div class="container mobile lines-fix">
+  {% include lines.html %}
+
+  <div class="single-section">
+
+  <div class="experience">
+    <div class="top-title">
+      <div class="vacancy-title">
+        {{ page.title}}
+      </div>
+    </div>
+
+    <div class="demands-blocks">
+      <div class="bckg-line"></div>
+      {% include single/experience.html %}
+      {% include single/plus.html %}
+      {% include single/offer.html  %}
+    </div>
+
+  </div>
+
+   <div class="form vacancy-form transition-animation-slow">
+     <div class="bckg-form"></div>
+     <div class="form-content">
+       <div class="iframe-border">
+         <iframe class="frame" scrolling="no" src="{{site.data.contacts.iframe}}" frameborder="0"></iframe>
+       </div>
+     </div>
+   </div>
+
+  </div>
+
+</div>
