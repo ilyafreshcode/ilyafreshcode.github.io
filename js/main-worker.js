@@ -193,11 +193,21 @@ $(function(){
         animation.init();
     }
 
+    function showCurrentDate(){
+        var currentDate = new Date();
+        var day = currentDate.getDate();
+        var month = currentDate.getMonth() + 1;
+        var year = currentDate.getFullYear();
+        $(".status").text(day + "." + month + "." + year);
+    }
+
+
     function init(){
         toggleMenuWhenResize();
         generateSlides();
         lines();
         animation();
+        showCurrentDate();
     }
 
     $('.modal').modal(
