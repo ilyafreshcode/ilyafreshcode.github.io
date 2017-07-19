@@ -1,0 +1,27 @@
+.lines{
+  position: absolute;
+  border-left: 1px solid #f5f5f5;
+  z-index: -1000;
+
+  div{
+    float: left;
+    border-right: 1px solid #f5f5f5;
+  }
+
+  @include breakpoint($screen-default){
+    div:nth-child(3), div:nth-child(4){
+      display: none;
+    }
+  }
+}
+
+.lines-fix{
+  .lines{
+    margin-top: -155px;
+
+    @include breakpoint($screen-default){
+      margin-top: -55px;
+    }
+
+  }
+}

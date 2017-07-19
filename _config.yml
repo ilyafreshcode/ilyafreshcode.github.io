@@ -39,5 +39,5 @@ permalink: pretty
 page_gen:
   - data: 'single'
     template: 'single_vacancy'
-    name: 'title_page'
+    name: 'link'
     dir: 'vacancies'

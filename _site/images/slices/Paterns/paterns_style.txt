@@ -1,0 +1,1 @@
+01_patern.jpg opacity:12%; 02_patern.jpg opacity:10%;
