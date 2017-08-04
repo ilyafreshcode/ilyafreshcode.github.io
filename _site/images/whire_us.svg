@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="1220px" height="130px" viewBox="0 0 1220 130">
+<style type="text/css"><![CDATA[
+.style0 {
+  font-size: 16px;
+  font-family: "Roboto-Bold";
+  fill: rgb(244,244,244);
+}
+]]></style>
+<text transform="matrix(11.26,0.00,0.00,11.26,-11.28,127.51)" class="style0"><tspan x="0.00 10.43 18.14 26.80 35.66 47.47 56.29 62.54 70.56 73.95 82.69 90.40" fill="rgb(243,243,243)">Напишите нам</tspan></text></svg>

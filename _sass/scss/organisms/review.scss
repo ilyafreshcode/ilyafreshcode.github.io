@@ -118,6 +118,15 @@
           margin-top: -60px;
         }
       }
+      &:nth-child(3){
+        img {
+          top: -68px;
+          width: 107.5%;
+        }
+        .card-style{
+          margin-top: -90px;
+        }
+      }
 
     }
 
@@ -148,52 +157,6 @@
           size: 20px;
           weight: 400;
         }
-      }
-    }
-
-    .krasnogor {
-      float: right;
-      margin-top: -160px;
-
-      @include breakpoint($screen-default){
-        float: none;
-        margin: 765px 0 0 0;
-      }
-
-
-      .card-style{
-        margin-top: -50px;
-      }
-      img {
-        top: -60px;
-      }
-    }
-    .troian{
-      @include breakpoint($screen-default){
-        float: right;
-        margin-top: -1278px;
-      }
-    }
-    .logvinova{
-      float: right;
-      @include breakpoint($screen-default){
-        margin-top: 50px;
-      }
-    }
-    .gonchar {
-      margin-top: 163px;
-
-      @include breakpoint($screen-default){
-        margin-top: 700px;
-      }
-
-      .card-style{
-        margin-top: -70px;
-        padding-top: 15px;
-      }
-      img {
-        top: -68px;
-        width: 107.5%
       }
     }
   }

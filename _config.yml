@@ -9,9 +9,8 @@ twitter_username: "@FreshCode1"
 github_username: "Fresh-code"
 future: true
 # Build settings
-gems:
+gem:
   - jekyll-sitemap
-  - jekyll-redirect-from
 show_drafts: false
 adaptive_image:
      cache: 2592000
