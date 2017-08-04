@@ -15,6 +15,7 @@ $(function(){
 
     var fixIphoneBugValue = 15;
 
+    var wasLoadeed = false;
 
     function generateSlides(){
         var slideSpeed = 1000;
@@ -140,6 +141,7 @@ $(function(){
     }
 
     function hideOpenNavOnScroll(){
+        loaderOnClick();
         if(isMobile) {
             toggleMenuInput.prop('checked', false);
             menu.hide();
@@ -214,6 +216,16 @@ $(function(){
         showCurrentDate();
     }
 
+    function loaderOnClick(){
+        if(!wasLoadeed) {
+            var frame = $("#google-frame");
+            frame.attr("src", "https://script.google.com/macros/s/AKfycbyuqz2QgcRWckA8H71OOn588YSsEY9u8ADudcIY9Ee7BGiAXHoE/exec");
+            document.getElementById('google-frame').onload = function () {
+                $(".loader").hide();
+            };
+        }
+    }
+
     $('.modal').modal(
         {
             dismissible: true,
@@ -239,6 +251,8 @@ $(function(){
 
 
     $('.show-modal').click(hideOpenNavOnScroll);
+    $(".frameLoader").click(loaderOnClick);
+
 
     $(window).resize(toggleMenuWhenResize);
     $(window).scroll(menuBehaviorOnScroll);
