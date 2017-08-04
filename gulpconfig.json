@@ -1,6 +1,6 @@
 {
-	"remoteServer": "git@github.com:ilyafreshcode/ilyafreshcode.github.io.git",
-	"remotePath": "/_site/",
+	"remoteServer": "https://ilyafreshcode.github.io/",
+	"remotePath": "/",
 	"cloudflareToken": "",
 	"cloudflareEmail": "",
 	"cloudflareDomain": ""
