@@ -223,7 +223,10 @@ $(function(){
                 id:  'google-frame',
                 class: 'frame',
                 frameborder: 0,
-                scrolling: 'yes'
+                scrolling: 'yes',
+                onload: function(){
+                    $(".loader").hide();
+                }
             }).appendTo('.modal-frame');
         }
     }
