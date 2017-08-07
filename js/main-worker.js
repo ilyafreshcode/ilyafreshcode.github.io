@@ -228,7 +228,7 @@ $(function(){
                     $(".loader").hide();
                 };
             });
-
+            wasLoadeed = true;
         }
     }
 
