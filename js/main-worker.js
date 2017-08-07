@@ -225,7 +225,9 @@ $(function(){
                 frameborder: 0,
                 scrolling: 'yes'
             }).appendTo('.modal-frame').on("load", function(){
-                $(".loader").hide();
+                setTimeout(function(){
+                    $(".loader").hide();
+                }, 400);
             });
         }
     }
