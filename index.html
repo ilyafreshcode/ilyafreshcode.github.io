@@ -4,18 +4,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-        ga('create', 'UA-102437969-1', 'auto');
-        ga('send', 'pageview');
-
-    </script>
-
-
     <title>Главная - Freshcode</title>
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -57,7 +45,7 @@
                 
                 <li><a href="/contacts" class=" link" >Контакты</a></li>
                 
-                <li class="hide-mobile"><a href="#CVForm" class="button show-modal frameLoader"><span class="transition-animation-btn btn-animation">Отправить резюме</span></a></li>
+                <li class="hide-mobile"><a href="#CVForm" class="button show-modal"><span class="transition-animation-btn btn-animation">Отправить резюме</span></a></li>
                 <li class="show-mobile"><a href="/contacts" class="button ">Отправить резюме</a></li>
             </ul>
         </div>
@@ -68,9 +56,8 @@
         <img src="/images/close-icon.svg" height="18" width="18">
     </a>
     <div class="m-content">
-        <div class="iframe-border modal-frame">
-            <div class="loader"></div>
-            <!-- iframe with google form will be added here -->
+        <div class="iframe-border">
+            <iframe class="frame" scrolling="yes" src="https://script.google.com/macros/s/AKfycbyuqz2QgcRWckA8H71OOn588YSsEY9u8ADudcIY9Ee7BGiAXHoE/exec" frameborder="0"></iframe>
         </div>
     </div>
 </div>
@@ -97,7 +84,7 @@
         <div class="caption-text transition-animation">
             <h3>Freshcode</h3>
             <span>Разыскиваем IT таланты</span><br>
-            <span class="hide-mobile"><a href="#CVForm" class="button frameLoader" style="margin-top: 35px;">
+            <span class="hide-mobile"><a href="#CVForm" class="button" style="margin-top: 35px;">
                 <span class="transition-animation-btn btn-animation">Найди работу мечты</span>
             </a></span>
             <span class="show-mobile"><a href="/contacts" class="button" style="margin-top: 35px;">
@@ -117,7 +104,7 @@
     </section>
 
 
-    <a href="#CVForm" class="button frameLoader send-cv-position hide-mobile"><span class="transition-animation-btn btn-animation">Отправить резюме</span></a>
+    <a href="#CVForm" class="button send-cv-position hide-mobile"><span class="transition-animation-btn btn-animation">Отправить резюме</span></a>
     <a href="/contacts" class="button send-cv-position show-mobile">Отправить резюме</a>
 
     <div class="quotes begin-position-qclose transition-animation">
@@ -187,7 +174,7 @@
         
         <div class="card horizontal">
             <div class="card-image">
-                <img src=/images/slobajan.jpg>
+                <img src=/images/photo2.png>
             </div>
             <div class="card-style card-content">
                 <p class="slide-num"><span class="slider-number-horizontal"></span> /
@@ -422,5 +409,15 @@
 <script src="/js/main-worker.js"></script>
 
         </div>
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-102437969-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
     </body>
 </html>
