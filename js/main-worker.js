@@ -224,11 +224,12 @@ $(function(){
                 class: 'frame',
                 frameborder: 0,
                 scrolling: 'yes'
-            }).appendTo('.modal-frame').on("load", function(){
-                setTimeout(function(){
+            }).appendTo('.modal-frame').ready(function(){
+                document.getElementById('google-frame').onload = function () {
                     $(".loader").hide();
-                }, 400);
+                };
             });
+
         }
     }
 
