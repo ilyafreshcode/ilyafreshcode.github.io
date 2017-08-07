@@ -225,9 +225,6 @@ $(function(){
                 frameborder: 0,
                 scrolling: 'yes'
             }).appendTo('.modal-frame');
-            document.getElementById('google-frame').onload = function () {
-                $(".loader").hide();
-            };
         }
     }
 
