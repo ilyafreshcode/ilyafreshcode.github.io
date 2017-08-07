@@ -1,0 +1,54 @@
+// =============================================================================
+// Colors (Base)
+// =============================================================================
+$white: #fff;
+$black: #000;
+$green: #00e1a4;
+$green-tint: #00da9f;
+$grey: #c3c3c3;
+$grey-light: #f8f8f8;
+$subtext-color: #f4f4f4;
+
+$subtext-lite: #f1f1f1;
+
+$shadow: #f9f9f9;
+
+// =============================================================================
+// Typography
+// =============================================================================
+$font-size-base: 16px;
+$font-size-title: 100px;
+$font-size-big: 20px;
+
+// =============================================================================
+// Breakpoints
+// =============================================================================
+$screen-sm: 768px;
+$screen-sm-min: $screen-sm;
+$screen-tablet: $screen-sm-min;
+$screen-md: 1024px;
+$screen-md-min: $screen-md;
+$screen-desktop: $screen-md-min;
+$screen-lg: 1200px;
+$screen-lg-min: $screen-lg;
+$screen-lg-desktop: $screen-lg-min;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$screen-menu-desktop: 1150px;
+$screen-default: 1024px;
+$screen-ipad: 870px;
+$screen-nexus: 712px;
+$screen-iphone-plus: 427px;
+$screen-iphone: 377px;
+$screen-iphone-sm: 337px;
+
+@font-face {
+  font-family: 'helv';
+  src: url('/fonts/HelveticaLight.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+$font-style-caption: 'helv', sans-serif;
+
+$opacity-bg: 0.1;

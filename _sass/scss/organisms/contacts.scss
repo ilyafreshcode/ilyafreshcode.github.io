@@ -1,0 +1,245 @@
+.contacts {
+
+  .title-section{
+    @include beginPosition(17%, 0);
+  }
+
+  .title-animation{
+    animation-name: reviewTitle;
+  }
+
+  .send-form {
+    background-color: $green;
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 555px;
+    margin: 0 auto;
+    position: relative;
+    width: 80%;
+
+    @include breakpoint($screen-default){
+      flex-direction: row;
+      margin: 0 0 0 -15px;
+      height: 556px;
+      width: 100%;
+    }
+
+    .img-fly {
+      padding-right: 55px;
+      @include breakpoint($screen-lg){
+        padding-right: 45px;
+      }
+      @include breakpoint($screen-default){
+        padding-right: 0;
+        margin: -487px 944px 0 0;
+
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+        transform: rotate(90deg);
+      }
+
+      .img-plain-animation{
+        animation-name: contactsPlain;
+      }
+
+      .img-fly-position{
+        float: right;
+
+        @include beginPosition(0, 45%);
+
+        @include breakpoint($screen-default){
+          float: none;
+        }
+      }
+
+    }
+
+    img {
+      height: auto;
+      width: 100px;
+
+      @include breakpoint($screen-default){
+        height: auto;
+        width: 50px;
+      }
+    }
+  }
+
+  .form-content {
+    box-shadow: -5px 5px 25px 0 rgba(0, 0, 0, 0.15);
+    background-color: $white;
+    padding: 15px 35px;
+    position: relative;
+    margin: -505px 0 150px 80px;
+    width: 65%;
+    height: 550px;
+    overflow: hidden;
+
+    @include breakpoint($screen-default){
+      margin: -488px 0 150px 0;
+      padding: 17px 0 0 23px;
+      height: 500px;
+      width: 100%;
+    }
+
+    h3 {
+      font-weight: 700;
+    }
+
+    .iframe-border{
+      width: 104%;
+      overflow: hidden;
+      height: 535px;
+
+      @include breakpoint($screen-default){
+        height: 510px;
+      }
+
+    }
+
+    .frame{
+      margin: -3px 0 0 -18px;
+      width: 100%;
+      height: 536px;
+      overflow: hidden;
+
+      @include breakpoint($screen-default){
+        margin: -5px 0 0 -18px;
+        height: 580px;
+      }
+    }
+
+  }
+
+  .gray-block {
+    position: relative;
+    background-color: $grey-light;
+    margin: -887px 0 300px 0;
+    height: 879px;
+    width: 50%;
+    z-index: -100;
+
+    @include breakpoint($screen-lg){
+      margin-top: -1003px;
+    }
+    @include breakpoint($screen-default){
+      margin: -1200px 0 400px 10px;
+      background-color: $white;
+      width: 30%;
+    }
+
+  }
+
+  .lines-bg-1 {
+    background: {
+      image: url("/images/Paterns/01_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: block;
+    position: relative;
+    float: right;
+    margin-top: -1426px;
+    width: 50%;
+    height: 1223px;
+    z-index: -20;
+    opacity: 0.15;
+
+    @include breakpoint($screen-default){
+      margin-top: -1405px;
+      height: 1000px;
+    }
+
+  }
+
+  .lines-bg-sq{
+    background: {
+      image: url("/images/Paterns/01_patern.jpg");
+      repeat: repeat;
+      position: 50% 0;
+    }
+    display: none;
+    @include breakpoint($screen-default){
+      display: block;
+      margin: -137px 0 86px 0;
+      opacity: 0.15;
+      height: 60px;
+      width: 100%;
+      z-index: -30;
+    }
+  }
+
+  .line-bg-tr {
+    width: 0;
+    height: 0;
+    border-top: 650px solid $white;
+    border-right: 650px solid transparent;
+  }
+
+  .subtext-animation{
+    animation-name: contactsSubtitle;
+  }
+
+  .subtext {
+    color: $subtext-color;
+    font-size: $font-size-title + 85px;
+    line-height: 150px;
+    font-weight: 700;
+    float: right;
+    text-align: right;
+    margin-top: -49px;
+    margin-right: -15px;
+    width: 120%;
+    z-index: 10;
+
+    @include beginPosition(7%, 0);
+    
+    @include breakpoint($screen-lg){
+      float: none;
+      text-align: left;
+      height: 155px;
+      width: 100%;
+      overflow: hidden;
+    }
+    @include breakpoint($screen-default){
+      font-size: 67px;
+      margin: -212px 0 0 -13px;
+      width: 115%;
+    }
+    
+  }
+
+  .title {
+    display: inline-block;
+    margin: 200px 0 0 -45px;
+    width: 510px;
+    line-height: .9;
+    font-family: $font-style-caption;
+    font-size: $font-size-title - 4px;
+    font-weight: 300;
+    height: 76px;
+    text-transform: uppercase;
+
+    @include breakpoint($screen-lg){
+      margin: 150px 0 0 -28px;
+    }
+    @include breakpoint($screen-default){
+      font-size: 46px;
+      margin: 115px 0 0 -15px;
+    }
+  }
+  .line{
+    margin: 21px 0 100px 0;
+    z-index: 1000;
+    width: 452px;
+    @include breakpoint($screen-default) {
+      font-size: 46px;
+      margin: -31px 0 42px 0;
+      width: 224px;
+    }
+  }
+}

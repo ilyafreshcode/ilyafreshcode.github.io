@@ -1,0 +1,178 @@
+/**----------------  main page -------------------*/
+@keyframes fadeInTitle {
+  from {opacity: 0; transform: translate3d(0, 24%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes fadeInText {
+  from {opacity: 0; transform: translate3d(24%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes fadeInQuotesClose {
+  from {opacity: 0; transform: translate3d(0, -120%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes fadeInQuotesOpen {
+  from {opacity: 0; transform: translate3d(0, 250%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes fadeInBox {
+  from {opacity: 0; transform: translate3d(0, 15%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes fadeInTextNext {
+  from {opacity: 0; transform: translate3d(51%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes fadeInEye {
+  from {opacity: 0; transform: translate3d(0, -50%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes fadeInVactext {
+  from {opacity: 0; transform: translate3d(12%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes fadeInTriagle {
+  from {opacity: 0; transform: translate3d(-20%, 0, 0);}
+  to {opacity: .1; transform: none;}
+}
+@keyframes fadeInVacSubtitle {
+  from {opacity: 0; transform: translate3d(0, 20%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes cardImgSlider {
+  from {opacity: 0; transform: translate3d(0, 30%, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+/**----------------  review page -------------------*/
+@keyframes reviewTitle {
+  from {opacity: 0; transform: translate3d(17%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes reviewSubtext {
+  from {opacity: 0; margin-top: 500px;}
+  to {opacity: 1; margin-top: 439px;}
+}
+@keyframes reviewCards {
+  from {opacity: 0; transform: translate3d(0, 15%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes reviewQClose{
+  from {opacity: 0; transform: translate3d(0, -230%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes reviewQOpen {
+  from {opacity: 0; transform: translate3d(0, 200%, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+/**----------------  contact page -------------------*/
+@keyframes contactsPlain {
+  from {opacity: 0; transform: translate3d(0, 45%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes contactsSubtitle {
+  from {opacity: 0; transform: translate3d(7%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+/**----------------  vacancy page -------------------*/
+@keyframes vacancyTitle {
+  from {opacity: 0; transform: translate3d(25%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyLine {
+  from {opacity: 0; transform: translate3d(45%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyIntro {
+  from {opacity: 0; transform: translate3d(30%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyBaseSubtext{
+  from {opacity: 0; transform: translate3d(19%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyCards{
+  from {opacity: 0; transform: translate3d(0, 20%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyText{
+  from {opacity: 0; bottom: 170px;}
+  to {opacity: 1; bottom: 55px;}
+}
+@keyframes vacancyToUsTitle{
+  from {opacity: 0;transform: translate3d(12%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+/**----------------  vacancy single page -------------------*/
+@keyframes vacancyJobs{
+  from {opacity: 0;transform: translate3d(10%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes vacancyForm{
+  from {opacity: 0;transform: translate3d(0, 10%, 0);}
+  to {opacity: 1; transform: none;}
+}
+
+
+/**----------------  about page -------------------*/
+@keyframes aboutTitle {
+  from {opacity: 0; transform: translate3d(0, 30%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutBgImg {
+  from {opacity: 0; transform: translate3d(36%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutLeftText {
+  from {opacity: 0; transform: translate3d(0, 90%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutArrow {
+  from {opacity: 0; transform: translate3d(48%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutNext {
+  from {opacity: 0; transform: translate3d(-11%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTextBlock {
+  from {opacity: 0; transform: translate3d(0, 15%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTargetImg {
+  from {opacity: 0; transform: translate3d(0, 104%, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTargetText {
+  from {opacity: 0; transform: translate3d(45%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTargetSubtext {
+  from {opacity: 0; transform: translate3d(5%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutProgressImg {
+  from {opacity: 0; transform: translate3d(30%, 0, 0);}
+  to {opacity: 1; transform: none;}
+}
+@keyframes aboutTriangle {
+  from {opacity: 0; transform: translate3d(-7%, 0, 0);}
+  to {opacity: 0.15; transform: none;}
+}
+
+/**----------------  buttons -------------------*/
+@keyframes buttonArrow {
+  0% {opacity: 1; transform: none;}
+  50% {opacity: 0; transform: translate3d(30%, 0, 0);}
+  55% {opacity: 0; transform: translate3d(-30%, 0, 0);}
+  100% {opacity: 1; transform: none;}
+}
+
+@keyframes buttonRegularAnimation {
+  0% {opacity: 1; transform: none;}
+  50% {opacity: 0; transform: translate3d(12%, 0, 0);}
+  51% {opacity: 0; transform: translate3d(-12%, 0, 0);}
+  100% {opacity: 1; transform: none;}
+}

@@ -1,0 +1,124 @@
+@import "mixins";
+@import "variables";
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  position:relative;
+
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+#skrollr-body{
+  overflow-x: hidden;
+  cursor: default;
+}
+.overflow {
+  overflow: hidden;
+}
+
+.float-right {
+  float: right;
+}
+
+.vertical-middle {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.line {
+  background-color: black;
+  border: none;
+  margin: 29px 0 0;
+  height: 7px;
+  width: 482px;
+
+  @include breakpoint($screen-default){
+    height: 4px;
+  }
+}
+
+.opacity {
+  opacity: 0.8;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+
+  @include breakpoint($screen-lg) {
+    padding: 0 35px;
+  }
+  @include breakpoint($screen-iphone-sm) {
+    padding: 0 20px;
+  }
+
+}
+
+.hide {
+  display: none;
+}
+
+
+.mobile {
+  @include breakpoint(1024px) {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+}
+
+.transition-animation{
+  @include transition(.5s, .3s);
+}
+.transition-animation-slow{
+  @include transition(.5s, .7s);
+}
+.transition-animation-slower{
+  @include transition(.3s, .7s);
+}
+.transition-animation-btn{
+  @include transition(.55s, 0s);
+}
+
+.show-mobile{
+  display: none !important;
+
+  @include breakpoint($screen-default){
+    display: inline-block !important;
+  }
+}
+.hide-mobile{
+  display: inline-block !important;
+
+  @include breakpoint($screen-default){
+    display: none !important;
+  }
+}
+
+a:hover .btn-animation{
+  animation-name: buttonRegularAnimation;
+}

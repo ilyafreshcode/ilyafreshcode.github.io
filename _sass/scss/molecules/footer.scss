@@ -1,0 +1,101 @@
+@import "../mixins";
+@import "../variables";
+
+footer {
+  background-color: $green;
+  color: $white;
+  font: {
+    size: $font-size-base;
+    weight: 700;
+  }
+  height: 200px;
+  width: 100%;
+
+  @include breakpoint($screen-md){
+    font-size: $font-size-base - 2px;
+    height: 120px;
+  }
+
+  .footer-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include breakpoint($screen-md){
+      flex-direction: column;
+    }
+  }
+
+  .footer-col{
+    height: 200px;
+    width: 33%;
+
+    &:nth-child(2){
+      @include breakpoint($screen-md) {
+        height: 0;
+      }
+    }
+
+    @include breakpoint($screen-md){
+      height: 60px;
+      width: 280px;
+      margin: auto;
+    }
+
+    .copyright{
+      display: inline-block;
+      width: 100%;
+
+      @include breakpoint($screen-md){
+        text-align: center;
+        margin-top: 15px;
+        width: 100%;
+      }
+    }
+
+    .links-block{
+      display: flex;
+      justify-content: space-between;
+
+      @include breakpoint($screen-md){
+        width: 105%;
+        margin: 0 auto 0 -15px;
+      }
+
+      li{
+        display: inline-block;
+        text-align: justify;
+        text-align-last: center;
+        -moz-text-align-last: center;
+        width: calc(100% / 8);
+
+        img{
+          height: 22px;
+          width: 22px;
+        }
+      }
+    }
+
+    .contact-list{
+      li {
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 7px;
+          height: 2px;
+          margin: 0 15px 5px 0;
+          position: relative;
+
+          background: $white;
+        }
+      }
+      @include breakpoint($screen-md){
+        margin-left: 0;
+        margin-bottom: 15px;
+        height: 0;
+        width: 100%;
+      }
+    }
+
+  }
+}

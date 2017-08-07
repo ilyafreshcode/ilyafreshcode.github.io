@@ -1,0 +1,8 @@
+  <div class="offer vacancy-offer transition-animation">
+    <div class="title">{{page.offer_title}}</div>
+    {% for item in page.offer_body %}
+    <div class="inline">
+      <hr><p>{{item.title}}</p>
+    </div>
+    {% endfor %}
+  </div>

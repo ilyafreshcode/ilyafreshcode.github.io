@@ -1,0 +1,26 @@
+<div class="progress-section">
+  <hr class="top">
+  <div class="products">
+    <div class="block">
+      <div class="title">{{site.data.about.fifth_section.title}}</div>
+      <div class="subtitle">{{site.data.about.fifth_section.subtitle}}</div>
+    </div>
+    <div class="progress-img">
+      {% for progress in site.data.about.fifth_section.progress %}
+      <div class="image-cycle">
+        <img src={{progress.img}} alt="" class="progress-img-current transition-animation">
+        <div class="white-dote">
+          <hr class="before">
+          <hr class="after">
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="background">
+    <div class="small-rectangle"></div>
+    <div class="line-rectangle"></div>
+    <div class="dote-rectangle"></div>
+  </div>
+  <hr class="bottom">
+</div>

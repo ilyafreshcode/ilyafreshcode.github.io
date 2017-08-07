@@ -1,0 +1,1288 @@
+@import "../mixins";
+@import "../variables";
+
+.about {
+  @include breakpoint(1024px) {
+    display: inline-block;
+    width: 280px;
+    margin-top: 60px;
+  }
+
+  * {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .subtext {
+    color: $subtext-color;
+    font-weight: 700;
+    text-align: left;
+  }
+
+  .base-section {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+
+    @include breakpointDesktop {
+      margin-top: 95px;
+      flex-direction: row;
+    }
+
+    .line,
+    .subtitle,
+    .intro {
+      z-index: 2;
+      position: relative;
+    }
+
+    .about-title{
+      @include beginPosition(0, 30%);
+    }
+
+    .about-title-animation{
+      animation-name: aboutTitle;
+    }
+
+    .text-block {
+      width: 100%;
+      max-width: none;
+
+      @include breakpointDesktop {
+        max-width: 704px;
+        width: 100%;
+      }
+    }
+
+    .title {
+      max-width: 510px;
+      font-family: "helv", sans-serif;
+      font-size: 44px;
+      height: 35px;
+      margin: 40px 0 0 -15px;
+      line-height: .9;
+      text-transform: uppercase;
+
+      @include breakpointDesktop {
+        margin: 128px 0 0 -35px;
+        font-size: 96.98px;
+        height: 76px;
+      }
+    }
+
+    .line {
+      max-width: 129.5px;
+      margin-top: 9.5px;
+      border: none;
+
+      @include breakpointDesktop {
+        margin-top: 29px;
+        max-width: 259px;
+      }
+    }
+
+    .subtitle {
+      font-size: 28px;
+      line-height: 35px;
+      font-weight: 700;
+      max-width: 489px;
+      width: 100%;
+      margin: 40px 0 29px 0;
+
+      @include breakpointDesktop {
+        font-size: 40px;
+        line-height: 40px;
+        max-width: 527px;
+        letter-spacing: 0.5px;
+        margin: 62px 0 38px 0;
+      }
+    }
+
+    .dotes {
+      position: absolute;
+      top: 40px;
+
+      @include breakpointDesktop {
+        top: 0;
+      }
+
+      img {
+        max-width: 521px;
+        width: 100%;
+        max-height: 434px;
+
+        @include breakpointDesktop {
+          max-width: 535px;
+          width: 100%;
+          height: 537px;
+          max-height: none;
+        }
+      }
+    }
+
+    .about-bg-img{
+      @include beginPosition(36%, 0);
+    }
+
+    .about-bg-img-animation{
+      animation-name: aboutBgImg;
+    }
+
+    .logo {
+      display: none;
+      position: absolute;
+      top: -13rem;
+      left: 19.5rem;
+
+      @include breakpointDesktop {
+        display: block;
+      }
+
+      img {
+        max-width: 655px;
+      }
+    }
+
+    .block-image {
+      margin-top: -10px;
+      height: 265px;
+      display: inline-block;
+      max-width: 600px;
+      overflow: hidden;
+      position: relative;
+
+      @include breakpointDesktop {
+        width: 100%;
+        max-width: 754px;
+        height: 100%;
+        margin-top: 30px;
+        overflow: inherit;
+        right: 0;
+      }
+
+      .dote {
+        max-width: 934px;
+        max-height: 581px;
+        z-index: 0;
+        min-height: 76px;
+        width: 100%;
+        left: 0;
+        background-image: url(/images/Paterns/patern_04.png);
+        bottom: 0;
+        position: absolute;
+
+        @include breakpointDesktop {
+          left: -49%;
+          bottom: -335px;
+          max-width: 934px;
+          height: 59vw;
+          width: 80vw;
+          max-height: 601px;
+          opacity: 0.9;
+          z-index: 1;
+        }
+
+        @include breakpoint(lg) {
+          bottom: -137px;
+          max-width: 934px;
+          height: 55vw;
+          width: 80vw;
+          max-height: 599px;
+        }
+
+      }
+
+      img {
+        max-width: 611px;
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 0;
+
+        @include breakpointDesktop {
+          width: 125%;
+          max-width: none;
+          margin-right: -100px;
+        }
+      }
+    }
+  }
+
+  .intro {
+    font-size: $font-size-big;
+    font-weight: 400;
+    line-height: 26px;
+    transform: scaleX(1.002);
+  }
+
+  .first-section {
+    height: 48rem;
+    position: relative;
+    margin-top: 24px;
+
+    @include breakpointDesktop {
+      top: -12.4rem;
+      left: -2.7rem;
+      height: 38rem;
+      margin-top: -95px;
+    }
+
+    @include breakpoint(lg) {
+      top: -24.4rem;
+    }
+
+    .white-block {
+      @include breakpointDesktop {
+        background-color: $white;
+        width: 587px;
+        height: 220px;
+        top: -25px;
+        position: absolute;
+      }
+    }
+
+    .line-vertical {
+      background-color: $grey;
+      margin: 0;
+      border: 0;
+      width: 7px;
+      left: -17px;
+      top: 9px;
+      height: 53px;
+      position: absolute;
+
+      @include breakpointDesktop {
+        left: -2rem;
+        height: 76px;
+        bottom: -82px;
+      }
+    }
+
+    .left-text-animation{
+      animation-name: aboutLeftText;
+    }
+
+    .left-text {
+      color: $black;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 35px;
+      width: 256px;
+      text-align: left;
+
+      @include beginPosition(0, 90%);
+
+      @include breakpointDesktop {
+        font-size: $font-size-big * 2;
+        width: 285px;
+        line-height: 46px;
+        margin-top: 93px;
+      }
+    }
+
+    .subtext {
+      font-size: 86px;
+      line-height: 74px;
+      position: relative;
+      bottom: 125px;
+      letter-spacing: -9px;
+
+      @include breakpointDesktop {
+        font-size: 239.63px;
+        line-height: 210px;
+        top: -26rem;
+        letter-spacing: 1px;
+        bottom: 0;
+      }
+    }
+
+    .dote {
+      max-width: 934px;
+      max-height: 581px;
+      z-index: 0;
+      height: 57px;
+      width: 113%;
+      left: 0;
+      background-image: url(/images/Paterns/patern_04.png);
+      bottom: 0;
+
+      @include breakpointDesktop {
+        display: none;
+      }
+    }
+
+    .about-arrow{
+      @include beginPosition(48%, 0);
+    }
+
+    .about-arrow-animation{
+      animation-name: aboutArrow;
+    }
+
+    .absolute-img {
+      position: absolute;
+    }
+
+    .about-arrow-big{
+      @include beginPosition(48%, 0);
+    }
+
+    .top {
+      z-index: 2;
+      width: 65px;
+      left: 153px;
+      top: 60px;
+
+      @include breakpointDesktop {
+        top: 1rem;
+        width: 148px;
+        left: 20rem;
+      }
+    }
+
+    .big {
+      display: none;
+
+      @include breakpointDesktop {
+        display: block;
+      }
+    }
+
+    .small {
+
+      @include breakpointDesktop {
+        display: none;
+      }
+    }
+
+    .bottom {
+      bottom: 76px;
+      left: 62px;
+      width: 80px;
+      z-index: 2;
+
+      @include tabletVersion {
+        left: 21.5rem;
+        width: 123px;
+        top: 32rem;
+      }
+
+      @include breakpoint(lg-max) {
+        left: 21.5rem;
+        width: 123px;
+        top: 32rem;
+      }
+
+    }
+
+    .right-text {
+      position: relative;
+      z-index: 2;
+      top: 58px;
+
+      @include breakpointDesktop {
+        left: 22.2rem;
+        top: 70px;
+      }
+
+      p {
+        color: $black;
+        font-size: 28px;
+        width: 286px;
+        margin-top: 10px;
+        line-height: 35px;
+        font-weight: 700;
+        text-align: left;
+        transform: scaleX(1.002);
+
+        @include breakpointDesktop {
+          font-size: 39.94px;
+          line-height: 30px;
+          width: 562px;
+        }
+      }
+
+      .about {
+        margin-top: 20px;
+        margin-bottom: 28px;
+        color: $black;
+        font-size: 14px;
+        width: 270px;
+        line-height: 25px;
+        font-weight: 400;
+        text-align: left;
+        transform: scaleX(1.002);
+
+        @include breakpointDesktop {
+          margin-bottom: 47px;
+          margin-top: 40px;
+          font-size: 19.97px;
+          line-height: 26px;
+          width: 495px;
+        }
+      }
+
+      .next-animation{
+        animation-name: aboutNext;
+      }
+
+      .next {
+        color: $black;
+        position: relative;
+        font-weight: 700;
+        text-align: left;
+        left: -12px;
+        font-size: 28px;
+        margin-top: 65px;
+
+        @include beginPosition(-11%, 0);
+
+        @include breakpointDesktop {
+          margin-top: 215px;
+          font-size: 40px;
+          left: -26px;
+        }
+      }
+
+      .button {
+        box-shadow: 0 5px 20px 0 rgba(0, 225, 164, 0.4);
+        font-size: 15px;
+        width: 186px;
+        line-height: 45px;
+        height: 45px;
+        padding: 0;
+
+        @include breakpointDesktop {
+          width: 220px;
+          height: 50px;
+          font-size: 16.97px;
+          line-height: 50px;
+        }
+      }
+    }
+  }
+
+  .second-section {
+    margin: 8px auto 60px;
+    position: relative;
+    max-width: 520px;
+
+    @include breakpointDesktop {
+      max-width: 1170px;
+      margin-top: 11rem;
+    }
+
+    @include breakpoint(lg) {
+      margin-top: -8rem;
+    }
+
+    .single-block {
+      max-width: 520px;
+      border: 2px solid $black;
+      border-bottom: 0;
+      position: relative;
+      min-height: 260px;
+
+      @include breakpointDesktop {
+        border-right: 0;
+        border-bottom: 2px solid $black;
+        min-height: 321px;
+        max-width: 390px;
+      }
+
+      &:last-child {
+        border-bottom: 2px solid $black;
+
+        @include breakpointDesktop {
+          border-right: 2px solid $black;
+        }
+      }
+
+      .text-block-animation{
+        animation-name: aboutTextBlock;
+      }
+
+      .text-block {
+        padding: 29px 23px;
+
+        @include beginPosition(0, 15%);
+
+        @include breakpointDesktop {
+          padding: 59px 58px;
+        }
+      }
+
+      .mark {
+        border-radius: 50%;
+        background-color: $black;
+        color: $white;
+        top: -20px;
+        left: -20px;
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+
+        @include breakpointDesktop {
+          top: -25px;
+          left: -25px;
+          width: 50px;
+          height: 50px;
+          font-size: 16px;
+        }
+      }
+
+      .step {
+        color: $black;
+        font-size: 14px;
+        margin-bottom: 27px;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: left;
+
+        @include breakpointDesktop {
+          font-size: 16px;
+          margin-bottom: 36px;
+        }
+      }
+
+      .about-step {
+        color: $black;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        text-align: left;
+
+        @include breakpointDesktop {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .block {
+      display: flex;
+      background-color: $white;
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+      flex-direction: column;
+      height: 100%;
+      max-width: 520px;
+      margin: auto;
+
+      @include breakpointDesktop {
+        min-height: 321px;
+        flex-direction: row;
+        max-width: 1170px;
+      }
+
+    }
+
+    .reverse,
+    img {
+      position: absolute;
+    }
+
+    .reverse {
+      width: 50%;
+      height: 48px;
+      top: -48px;
+      background-image: url(/images/Paterns/01_patern.jpg);
+      opacity: 0.1;
+
+      @include breakpointDesktop {
+        right: 293px;
+        width: 292px;
+        height: 142px;
+        top: -142px;
+        background-color: $shadow;
+        background-image: none;
+        opacity: 1;
+      }
+    }
+
+    .line-rectangle {
+      width: 50%;
+      height: 102px;
+      top: -85px;
+      opacity: 1;
+      position: absolute;
+      right: 0;
+      z-index: -15;
+      background-color: $shadow;
+
+      @include breakpointDesktop {
+        top: -254px;
+        width: 292px;
+        height: 255px;
+        background-image: url(/images/Paterns/01_patern.jpg);
+        opacity: 0.1;
+      }
+    }
+
+    img {
+      right: 0;
+      top: -242px;
+    }
+  }
+
+  .third-section {
+    margin-top: 69px;
+    min-height: 1120px;
+    position: relative;
+
+    @include breakpointDesktop {
+      margin-top: 148px;
+      min-height: 755px;
+    }
+
+    .slider-top {
+      top: -26rem;
+      margin-right: 0;
+      width: 100%;
+      right: 0;
+      float: right;
+      position: relative;
+
+      @include breakpointDesktop {
+        top: -27rem;
+        width: 999px;
+      }
+    }
+
+    .text-block-description {
+      height: 577px;
+    }
+
+    .about-why-section{
+     @include beginPosition(24%, 0);
+    }
+
+    .about-why-section-animation{
+      animation-name: fadeInText;
+    }
+
+    .why-text {
+      font-size: 28px;
+      margin-bottom: 23px;
+      margin-left: -17px;
+      color: $black;
+      font-weight: 700;
+      text-align: left;
+
+      @include breakpointDesktop {
+        color: $black;
+        font-size: 40px;
+        font-weight: 700;
+        text-align: left;
+        margin-bottom: 40px;
+        margin-left: 0;
+      }
+    }
+
+    .why-about {
+      color: $black;
+      font-weight: 400;
+      text-align: left;
+      width: 286px;
+      font-size: 18px;
+      line-height: 24px;
+
+      @include breakpointDesktop {
+        width: 558px;
+        line-height: 26px;
+        font-size: 20px;
+      }
+    }
+
+    .card {
+      box-shadow: 0;
+    }
+
+    .bckg-line {
+      position: relative;
+      z-index: -1;
+      top: -132px;
+      width: 100%;
+      height: 532px;
+      opacity: 0.1;
+      background-image: url(/images/Paterns/01_patern.jpg);
+
+      @include breakpointDesktop {
+        top: -160px;
+        height: 532px;
+      }
+    }
+
+    .line-rectangle {
+      background-color: #f9f9f9;
+      height: 25px;
+      border: 0;
+      width: 100%;
+
+      @include breakpointDesktop {
+        width: 999px;
+        height: 51px;
+        position: absolute;
+        bottom: 50px;
+        right: 0;
+      }
+    }
+  }
+
+  .target-section {
+    height: 440px;
+    margin-top: 30px;
+    position: relative;
+
+    @include breakpointDesktop {
+      top: -90px;
+      height: 445px;
+      margin-top: 0;
+    }
+
+    .absolute {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 242px;
+      width: 100%;
+      background-image: url(/images/Paterns/02_patern.jpg);
+      opacity: 0.1;
+
+      @include breakpointDesktop {
+        top: 18px;
+        width: 876px;
+        height: 378px;
+      }
+    }
+
+    .target-block-animation{
+      animation-name: aboutTargetText;
+    }
+
+    .target-block {
+
+      @include beginPosition(45%, 0);
+
+      @include breakpointDesktop {
+        margin-top: -40px;
+      }
+    }
+
+    .target {
+      display: flex;
+      position: absolute;
+      z-index: 2;
+      flex-direction: column;
+      align-items: flex-start;
+
+      @include breakpointDesktop {
+        flex-direction: row;
+        align-items: center;
+        top: 143px;
+        margin-left: 42px;
+      }
+
+      .target-img-animation{
+        animation-name: aboutTargetImg;
+      }
+
+      .target-img {
+        margin-right: 68px;
+        width: 140px;
+        margin-top: 0;
+
+        @include beginPosition(0, 104%);
+
+        @include breakpointDesktop {
+          width: 180px;
+          margin-top: 20px;
+          height: 180px;
+        }
+      }
+
+      .title {
+        color: $black;
+        font-size: 28px;
+        line-height: 24px;
+        font-weight: 700;
+        text-align: left;
+        margin-top: 36px;
+        margin-bottom: 30px;
+
+        @include breakpointDesktop {
+          margin-bottom: 49px;
+          margin-top: 0;
+          font-size: 40px;
+          line-height: 40px;
+        }
+      }
+
+      .subtitle {
+        color: $black;
+        width: 263px;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 400;
+        text-align: left;
+
+        @include breakpointDesktop {
+          width: 568px;
+          line-height: 26px;
+          font-size: 20px;
+        }
+      }
+
+    }
+
+    .dots-rectangle {
+      width: 857px;
+      height: 401px;
+    }
+
+    .small-rectangle {
+      background-color: $shadow;
+      width: 50%;
+      height: 130px;
+      position: absolute;
+      bottom: 0;
+      top: 67px;
+
+      @include breakpointDesktop {
+        bottom: 0;
+        width: 254px;
+        height: 188px;
+        top: initial;
+      }
+    }
+
+    .subtext-animation{
+      animation-name: aboutTargetSubtext;
+    }
+
+    .subtext {
+      font-size: 80px;
+      right: -20px;
+      text-align: left;
+      position: absolute;
+      bottom: 0;
+      letter-spacing: 4.3px;
+      line-height: 59px;
+
+      @include beginPosition(5%, 0);
+
+      @include breakpointDesktop {
+        right: -60px;
+        font-size: 266.49px;
+        line-height: 182px;
+        letter-spacing: 5px;
+        bottom: 0;
+      }
+    }
+  }
+
+  .progress-section {
+    position: relative;
+    min-height: 33rem;
+    margin-top: 80px;
+
+    @include breakpointDesktop {
+      min-height: 369px;
+    }
+
+    .top {
+      position: absolute;
+      top: -5px;
+      background-color: $subtext-lite;
+      left: 0;
+      height: 7px;
+      width: 100%;
+      margin: 0;
+      border: 0;
+
+      @include breakpointDesktop {
+        position: relative;
+        top: inherit;
+        width: 586px;
+        margin-left: 19.5rem;
+      }
+    }
+
+    .products {
+      @include breakpoint(1024px) {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 30px;
+      }
+    }
+
+    .bottom {
+      display: none;
+      background-color: $subtext-lite;
+      width: 292px;
+      height: 7px;
+      margin-left: 19.5rem;
+      border: 0;
+      position: absolute;
+      bottom: 0;
+
+      @include breakpointDesktop {
+        display: block;
+      }
+    }
+
+    .background {
+      display: flex;
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      right: 0;
+      width: 100%;
+      flex-direction: row-reverse;
+
+      @include breakpointDesktop {
+        width: 877px;
+        flex-direction: row;
+      }
+    }
+
+    .small-rectangle {
+      background-color: $shadow;
+      width: 100%;
+      height: 190px;
+
+      @include breakpointDesktop {
+        width: 291px;
+        height: 355px;
+      }
+    }
+
+    .dote-rectangle {
+      display: none;
+      width: 292px;
+      height: 356px;
+      opacity: 0.1;
+      background-image: url(/images/Paterns/02_patern.jpg);
+
+      @include breakpointDesktop {
+        display: block;
+      }
+    }
+
+    .line-rectangle {
+      opacity: 0.1;
+      background-image: url(/images/Paterns/01_patern.jpg);
+      width: 100%;
+      height: 190px;
+
+      @include breakpointDesktop {
+        width: 293px;
+        height: 357px;
+      }
+    }
+
+    .block {
+
+      @include breakpointDesktop {
+        position: relative;
+        top: 20px;
+      }
+
+      .title {
+        color: $black;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: left;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        margin-left: -13px;
+        line-height: 20px;
+
+        @include breakpointDesktop {
+          font-size: 40px;
+          line-height: 40px;
+          margin: 0 0 35px 0;
+        }
+      }
+
+      .subtitle {
+        color: $black;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+        width: 256px;
+        margin-bottom: 37px;
+
+        @include breakpointDesktop {
+          font-size: 20px;
+          width: 308px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .progress-img {
+      position: relative;
+      background-color: $green;
+      width: 100%;
+      max-width: 320px;
+      min-height: 155px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      @include breakpointDesktop {
+        position: absolute;
+        flex-direction: row;
+        top: 100px;
+        right: -48px;
+        width: 700px;
+        max-width: none;
+      }
+
+      @include breakpoint(lg) {
+        width: 858px;
+      }
+
+      .progress-img-current{
+        height: auto;
+        width: 200px;
+
+        @include beginPosition(30%, 0);
+      }
+
+      .progress-img-animation{
+        animation-name: aboutProgressImg;
+      }
+
+      .image-cycle {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100px;
+
+        @include breakpointDesktop {
+          height: 100%;
+          min-height: 200px;
+          width: 287px;
+        }
+
+        &:nth-child(2) {
+
+          @include breakpointDesktop {
+            width: 270px;
+          }
+
+        }
+
+        &:last-child {
+          .white-dote {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .white-dote {
+      margin: 0;
+      height: 100%;
+    }
+
+    .before,
+    .after {
+      position: absolute;
+      background-color: $white;
+      width: 7.5px;
+      height: 5.5px;
+      border: 0;
+      margin: 0;
+      right: -7px;
+
+      @include breakpointDesktop {
+        width: 7px;
+        height: 10px;
+      }
+
+    }
+
+    .before {
+      bottom: 0;
+      left: 0;
+
+      @include breakpointDesktop {
+        left: inherit;
+        top: 0;
+      }
+    }
+
+    .after {
+      right: 0;
+      bottom: 0;
+
+      @include breakpointDesktop {
+      }
+    }
+  }
+
+  .last-section {
+    position: relative;
+    background-color: transparent;
+    margin-top: 14rem;
+    margin-bottom: 70px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    @include breakpointDesktop {
+      margin-top: 17rem;
+    }
+
+    .absolute {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: -160px;
+    }
+
+    .medium-rectangle {
+      position: absolute;
+      z-index: -2;
+      background-color: $shadow;
+      width: 292px;
+      height: 581px;
+      top: -24rem;
+      right: 0;
+      display: none;
+
+      @include breakpointDesktop {
+        display: block;
+      }
+    }
+
+    .white-block {
+      box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.15);
+      max-width: 427px;
+      width: 100%;
+      min-height: 425px;
+      max-height: 509px;
+      right: 0;
+      bottom: 77px;
+      position: relative;
+      background-color: $white;
+      display: flex;
+      flex-direction: column-reverse;
+
+      @include breakpointDesktop {
+        flex-direction: row;
+        max-width: 857px;
+        align-items: center;
+        height: 425px;
+      }
+
+      img {
+        position: relative;
+        width: 100%;
+        max-width: 427px;
+        right: 0;
+        margin-top: -57px;
+
+        @include breakpointDesktop {
+          position: absolute;
+          width: 427px;
+          margin-top: 0;
+          top: -85px;
+        }
+      }
+    }
+
+
+    .white-block-text-animation{
+      animation-name: vacancyCards;
+    }
+
+    .text {
+      max-width: 430px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 50px;
+      height: 490px;
+
+      @include beginPosition(0, 20%);
+
+      @include breakpointDesktop {
+        margin-bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .title {
+      color: $black;
+      font-size: 28px;
+      width: 285px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      margin-top: 55px;
+      text-align: center;
+
+      @include breakpointDesktop {
+        font-size: 40px;
+        margin-bottom: 50px;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .about-triangle{
+    @include beginPosition(-7%, 0);
+  }
+
+  .about-triangle-animation{
+    animation-name: aboutTriangle;
+  }
+
+  .lines-bg {
+    background-image: url(/images/Paterns/01_patern.jpg);
+    background-repeat: repeat;
+    background-position: 50% 0;
+    display: block;
+    position: absolute;
+    margin-top: -295px;
+    width: 250px;
+    height: 250px;
+    z-index: -20;
+    opacity: 0.1;
+    left: 0;
+    border: 0;
+    bottom: -70px;
+
+    @include breakpointDesktop {
+      height: 731px;
+      width: 63%;
+    }
+
+    .line-bg-tr {
+      width: 0;
+      height: 0;
+      border-top: 250px solid #fff;
+      border-left: 250px solid transparent;
+
+      @include breakpointDesktop {
+        border-top: 731px solid #fff;
+        border-left: 737px solid transparent;
+      }
+
+    }
+  }
+}
